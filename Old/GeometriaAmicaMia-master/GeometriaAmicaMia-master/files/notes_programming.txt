@@ -1,0 +1,42 @@
+Le prime riunioni del gruppo di lavoro sono state orientate alla ricerca di un criterio molto rigido per la struttura delle directory e il naming dei file. In questo modo, si è azzerato il rischio di fare confusione nel lavoro di gruppo, stabilendo in maniera molto chiara le aree di competenza di ogni sviluppatore: non solo a livello di argomento, ma anche a livello di files gestiti da ciascuno. Abbiamo deciso di usare parole in inglese (file, example, exercise, theory, data) associate a interi incrementali (1,2,3...) separando quindi completamente il contenuto dal contenitore. Il risultato è aa struttura è la seguente. 
+
+La cartella principale contiene:
+
+- ProgettoGeometria.nb - file notebook principale
+- ProgettoGeometria.m - file m principale (che contiene i moduli)
+- files - una directory che contiene i file che statici comuni (testi, immagini)
+- data - una directory che contiene i file dinamici generati in esecuzione dal progetto
+
+- 1,2,3,4,5,6 - le directory che corrispondono agli argomenti;  si è deciso di utilizzare degli identificatori numerici incrementali al fine di evitare confusioni e per rendere non ambigua l'importazione dinamica dei contenuti (importazione dei contenuti con cicli for da 1 a 10). 
+Ognuna di queste directory ha la stessa identica struttura, che descriviamo:
+
+	- title.txt - file testuale che descrive il titolo dell'argomento
+	- year.txt - l'anno relativo all'argomento (dato che si tratta di argomenti storici); viene anche utilizzato per la creazione della timeline
+	- intro.txt - il testo di introduzione dell'argomento 
+	- image.png - il file che rappresenta l'argomento; usato anche nella timeline 
+
+	- exercise1_title.txt - il titolo dell'esercizio (il secondo esercizio avrà prefisso exercise2, etc)
+ 	- exercise1_description.txt - il titolo dell'esercizio
+	- exercise1.m - il codice dell'esercizio
+
+	- example1_title.txt - il titolo del primo esempio (il secondo esercizio avrà prefisso example2, etc)
+	- example1_description.txt - la descrizione del primo esempio
+	- example1.m - il codice del primo esempio
+
+	- theory.txt - un paragrafo di introduzione della teoria
+	- theory.m - un codice della teoria
+
+	- theory1_title.txt - il titolo del primo paragrafo di teoria (il secondo paragrafo di teoria avrà prefisso theory2, etc)
+	- theory1_descripition.txt - la descrizione del primo paragrafo di teoria
+	- theory1.m - il codice del primo paragrafo di teoria
+
+	- possono essere presenti ulteriori file statici, che gli sviluppatori più precisi hanno identificato con naming più congruente (es: exercise1_image1.png) o meno rigido (barca.png)
+	
+In generale, prima di importare un file, il codice fa un check per determinare l'effettiva presenza di un file per evitare degli errori in import. Questo determina che la presenza di questi files sia  di fatto opzionale (es: in un esempio 1 non è presente una descrizione example1_description.txt perchè magari l'esercizio è solo pratico e per rappresentarlo è sufficiente il file example1.m; mentre l'esempio due è completamente teorico, e quindi è presente il file example2_description.txt ma non il file example2.m).
+
+In alcune versioni del progetto si ritrova anche la cartella modules/old_modules, che conteneva i moduli prima che questi fossero trasferiti sul file ProgettoGeometria.m
+
+L'uso di strutture identiche per ogni argomento ha permesso riutilizzare gli stessi moduli per la creazione delle interfacce. Ad esempio, il fatto che l'introduzione sia contenuta in un file chiamato intro.txt in ogni argomento, ha permesso lo sviluppo di un modulo module_directory_intro che è stato richiamato in ogni argomento, generando nello stesso modo un testo ben formattato e dotato di ausili per l'accessibilità audio. 
+Il riutilizzo di strutture di naming comuni nelle varie directory è stato determinante nello sviluppo: ad esempio nell'importazione del titolo degli esercizi nella "pagella" contenuta nel pannello utente.
+
+Tutti i files sono stati versionati su una repository github (oltre 145 commit fra il 5 maggio e il 27 luglio), permettendo agli sviluppatori un'agile lavoro di gruppo anche da remoto.

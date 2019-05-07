@@ -1,0 +1,3 @@
+Prendiamo nel piano una retta r, un punto P che non appartiene alla retta. Si definisce simmetria assiale una isometria che al punto P associa il suo simmetrico rispetto alla retta r (detta asse di simmetria), ossia al punto P associa il punto P’ tale che:
+- P’ è un punto della retta perpendicolare alla retta r che passa per P
+- La distanza di P da r è uguale alla distanza di P’ da r

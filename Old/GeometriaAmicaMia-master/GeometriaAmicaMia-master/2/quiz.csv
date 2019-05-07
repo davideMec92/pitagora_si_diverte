@@ -1,0 +1,12 @@
+1,0,"Due triangoli simili non possono essere congruenti"
+2,1,"Due triangoli simili possono non essere congruenti"
+3,1,"Due triangoli congruenti sono anche simili"
+4,1,"Se due triangoli hanno due angoli rispettivamente congruenti, sono simili"
+5,0,"I triangoli isosceli aventi tutti la stessa base sono simili tra loro"
+6,1,"Due triangoli equilateri sono sempre simili"
+7,0,"Due triangoli rettangoli sono sepre simili"
+8,0,"Se due triangoli hanno rispettivamente congruenti i tre angoli allora sono congruenti"
+9,1,"Due triangoli equilateri con lo stesso perimetro sono congruenti"
+10,1,"Due triangoli isosceli che hanno congruenti le rispettive basi e uno dei lati adiacenti sono congruenti"
+11,0,"Avere due lati ordinatamente proporzionali è condizione sufficiente affinché due triangoli siano
+simili"

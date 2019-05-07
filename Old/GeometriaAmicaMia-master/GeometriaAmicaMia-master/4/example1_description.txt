@@ -1,0 +1,1 @@
+Dato un segmento è possibile costruire su di esso un triangolo equilatero.

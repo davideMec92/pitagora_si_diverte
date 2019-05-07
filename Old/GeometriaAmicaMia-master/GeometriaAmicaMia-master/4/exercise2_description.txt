@@ -1,0 +1,1 @@
+Muovendo opportunamente i manipolatori, esegui la costruzione geometrica affichè il segmento AF sia perpendicolare a BC

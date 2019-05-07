@@ -1,0 +1,1 @@
+Muovendo opportunamente i manipolatori, esegui la costruzione geometrica affichè il punto F sia bisettrice dell'angolo dato A

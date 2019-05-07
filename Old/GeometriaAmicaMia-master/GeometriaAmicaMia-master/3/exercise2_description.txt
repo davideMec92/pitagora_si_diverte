@@ -1,0 +1,1 @@
+Dato il triangolo seguente calcolare l’area.

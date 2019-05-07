@@ -1,0 +1,22 @@
+Perché abbiamo deciso di realizzare questo progetto:
+L’uso della storia nella matematica 
+- Contribuisce ad una visione più unitaria del sapere
+- Favorisce un approccio multi-disciplinare alla materia in oggetto
+- Permette un’umanizzazione della matematica
+- Può interessare anche chi non è appassionato di matematica
+Bisogna però stare attenti a non far si che questa prevarichi i contenuti.
+È per questo motivo che abbiamo deciso di realizzare questo progetto che dovrà essere utilizzato principalmente dallo studente in autonomia come integrazione nel e con il processo di insegnamento/apprendimento.
+
+A chi è rivolto il progetto:
+Il progetto è indirizzato a studenti che alla fine del primo biennio sono in possesso dei requisiti richiesti dalle indicazioni nazionali per accedere al terzo anno delle scuole secondarie di secondo grado
+
+Quali argomenti abbiamo trattato:
+Dalle indicazioni nazionali relative al primo biennio dei licei scientifici nella sezione di geometria risulta che lo studente:
+"avrà come obiettivo la conoscenza dei fondamenti della geometria euclidea del piano. Verrà chiarita l’importanza e il significato dei concetti di postulato, assioma, definizione, teorema, dimostrazione, con particolare riguardo al fatto che, a partire dagli Elementi di Euclide, essi hanno permeato lo sviluppo della matematica occidentale. In coerenza con il modo con cui si è presentato storicamente, l’approccio euclideo non sarà ridotto a una formulazione puramente assiomatica. Al teorema di Pitagora sarà dedicata una particolare attenzione affinché ne siano compresi sia gli aspetti geometrici che le implicazioni nella teoria dei numeri (introduzione dei numeri irrazionali) insistendo soprattutto sugli aspetti concettuali. Lo studente acquisirà la conoscenza delle principali trasformazioni geometriche (traslazioni, rotazioni, simmetrie, similitudini con particolare riguardo al teorema di Talete) e sarà in grado di riconoscere le principali proprietà invarianti. Inoltre studierà le proprietà fondamentali della circonferenza. La realizzazione di costruzioni geometriche elementari sarà effettuata sia mediante strumenti tradizionali (in particolare la riga e compasso, sottolineando il significato storico di questa metodologia nella geometria euclidea), sia mediante programmi informatici di geometria. Lo studente apprenderà a far uso del metodo delle coordinate cartesiane, in una prima fase limitandosi alla rappresentazione di punti, rette e fasci di rette nel piano e di proprietà come il parallelismo e la perpendicolarità. Lo studio delle funzioni quadratiche si accompagnerà alla rappresentazione geometrica delle coniche nel piano cartesiano. L’intervento dell’algebra nella rappresentazione degli oggetti geometrici non sarà disgiunto dall’approfondimento della portata concettuale e tecnica di questa branca della matematica. Saranno inoltre studiate le funzioni circolari e le loro proprietà e relazioni elementari, i teoremi che permettono la risoluzione dei triangoli e  il loro uso nell’ambito di altre discipline, in particolare nella fisica."
+Da qui abbiamo deciso di trattare i seguenti argomenti nell’ordine:
+- Isometrie
+- Similitudini e congruenze tra triangoli
+- Teorema di Pitagora
+- Elementi di Euclide
+- Proprietà fondamenti della circonferenza
+- Coordinate cartesiane 

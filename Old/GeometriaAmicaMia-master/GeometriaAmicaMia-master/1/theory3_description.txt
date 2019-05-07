@@ -1,0 +1,4 @@
+Prendiamo nel piano un punto O e un angolo A con verso orario o antiorario.
+La rotazione di centro O (detto centro di rotazione) e angolo A è l’isometria che ad un punto P del pianoassocia il punto P’ tale che
+- I segmenti OP e OP’ sono congruenti
+- Gli angoli POP’ e A hanno la stessa ampiezza

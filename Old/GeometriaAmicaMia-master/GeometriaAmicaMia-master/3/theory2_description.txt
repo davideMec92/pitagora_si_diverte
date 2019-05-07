@@ -1,0 +1,3 @@
+Il quadrato costruito sull’ipotenusa di un triangolo rettangolo è equivalente alla somma dei quadrati costruiti sui cateti del triangolo considerato.
+
+Chiamando C l'ipotenusa, A e B i cateti, il teorema di Pitagora ci dice che, se il triangolo è rettangolo, allora:

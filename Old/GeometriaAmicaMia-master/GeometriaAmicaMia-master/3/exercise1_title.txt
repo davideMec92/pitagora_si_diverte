@@ -1,0 +1,1 @@
+Calcola il lato del triangolo rettangolo

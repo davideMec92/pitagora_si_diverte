@@ -1,0 +1,12 @@
+Secondo la tradizione Talete fu il fondatore della scuola di Mileto (scuola filosofica attiva nel VI secolo Avanti Cristo, a Mileto). Visse tra la fine del VII secolo e la prima metà del VI secolo. Nella sua vita oltre che filosofo fu anche uomo politico, matematico (ancora oggi vengono insegnati i suoi teoremi di geometria), un astronomo (predisse persino un'eclissi solare il 28 maggio 585 Avanti Cristo) e un fisico. 
+Fu un grande viaggiatore: visitò l'Egitto, Babilonia e l'Asia Minore. Durante questi viaggi venne a contatto con le culture scientifiche di quei paesi, come le tavole astronomiche babilonesi. Furono questi viaggi che determinarono l'influenza orientale sulla scuola di Mileto.
+In ambito matematico sono attribuiti a Talete i quattro teoremi seguenti:
+1. Il cerchio è dimezzato dal suo diametro;
+2. Gli angoli alla base di un triangolo isoscele sono uguali tra loro;
+3. Gli angoli opposti al vertice sono tra loro uguali;
+4. Gli angoli iscritti in un semicerchio sono retti.
+Inoltre, sono attribuiti a Talete le soluzioni di questi due problemi geometrici:
+1. Determinare la distanza di una nave dal porto;
+2. Determinare l'altezza di una piramide mediante l'ombra da essa proiettata.
+Già da questi enunciati si può constatare il salto di qualità di Talete rispetto ai suoi maestri Egizi e Babilonesi. 
+Certo egli non dimostrò le 4 proposizioni sopra elencate (il concetto di dimostrazione come lo intendiamo noi oggi fu introdotto in seguito da Euclide), ma c'è una evidente correlazione tra ipotesi e tesi; dunque, date certe premesse si devono avere sempre le stesse conseguenze.

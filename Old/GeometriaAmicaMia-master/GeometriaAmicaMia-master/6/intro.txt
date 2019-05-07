@@ -1,0 +1,9 @@
+Descartes (latinizzato Cartesio) nasce in Francia nel piccolo comune di La Haye en Touraine (ora ribattezzato Descartes in suo onore) nel 1596 da una famiglia piccolo-medio borghese. Fu filosofo e matematico, ed è da molti ritenuto il fondatore della matematica e della filosofia moderna.
+Dopo una prima fase della sua vita dedicata interamente agli studi, Cartesio nel 1619 matura una sorta di crisi intellettuale e mistica.
+Si sentì incaricato da Dio di una grande missione di rinnovamento del sapere, a cui decise di dedicare il resto della sua vita.
+Iniziò così a viaggiare per l'Europa per nove anni finché non decise di stabilirsi in Olanda dove iniziò a sviluppare le sue teorie matematiche.
+Si occupò principalmente di Geometria e Algebra: trovò un modo per ridurre problemi geometrici a equazioni algebriche, con un notevole avanzamento in termini di generalizzazione e semplificazione dei problemi.
+L' approccio da lui utilizzato era diverso rispetto ai metodi precedenti: infatti mentre prima si dava molta più importanza alla geometria (in particolar modo quella euclidea), Cartesio riteneva che Algebra e Geometria fossero sullo stesso piano.
+Mentre prima di lui la risoluzione di un'equazione algebrica passava attraverso la costruzione di un modello geometrico (dall'algebra alla geometria), Cartesio considerava un'equazione come il modello algebrico di un problema geometrico (dalla geometria all'algebra).
+Questa operazione fu completata e rafforzata dall'utilizzo delle coordinate cartesiane.
+Cartesio muore a Stoccolma lasciando in eredità un contributo culturale determinante per le scoperte dei secoli successivi.

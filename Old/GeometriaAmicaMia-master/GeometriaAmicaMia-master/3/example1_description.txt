@@ -1,0 +1,10 @@
+I veri scopritori del teorema di Pitagora furono gli Egizi che lo utilizzano per ragioni puramente pratiche: ad esempio per piantare pali e innalzare strutture che fossero diritti.
+Vediamo l'esempio dela costruzione di un obelisco.
+
+Prendendo il terreno stesso come riferimento, allora l'obelisco dovrà essere perpendicolare al terreno.
+Vogliamo quindi che obelisco e terreno siano i due cateti di un triangolo rettangolo.
+Il problema a questo punto diventa la costruzione di un triangolo rettangolo. 
+Gli Egizi risolvono il problema intuendo che un triangolo con i lati in proporzione ai numeri 3, 4 e 5 doveva per forza essere rettangolo (oggi noi sappiamo che 3, 4 e 5 sono una terna pitagorica).
+
+Per dare forma a questa intuizione prendevano una corda con 13 nodi equidistanti fra loro, formata ovvero da 12 segmenti (3+4+5=12).
+Fissando al terreno il sesto e il decimo nodo, ottenevano una "squadra" delle dimensioni volute che indicava con precisione l'angolo retto da seguire per innalzare un obelisco perfettamente perpendicolare al terreno.

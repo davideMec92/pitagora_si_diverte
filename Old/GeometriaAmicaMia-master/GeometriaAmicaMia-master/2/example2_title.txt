@@ -1,0 +1,1 @@
+Esempio 2: Determinare l’altezza di una piramide
