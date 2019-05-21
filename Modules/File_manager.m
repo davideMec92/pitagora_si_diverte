@@ -10,17 +10,13 @@ Init[ directory_ ]:=Module[{},
 ];
 
 (*Funzione che verifica se un determinato username, \[EGrave] presente nel dataset*)
-AddUser[ username_ ]:=Module[{usersDatasetList},
+AddUser[ username_ ]:=Module[{userDataset},
 
 	If[ FileExistsQ[ mainDirectory <> "Data/" <> username <> ".csv" ], 
 		(
-			usersDatasetList = Import[ mainDirectory <> "Data/" <> username <> ".csv", "CSV" ];
-						
-			
-			Print["Testsdfs"];
-			usersDatasetList = usersDatasetList[[1]];
-			userDataset = usersDatasetList;
-			Return[usersDatasetList];
+			importedDatasetList = Import[ mainDirectory <> "Data/" <> username <> ".csv", "CSV" ];
+			userDataset = importedDatasetList[[1]];
+			Return[userDataset];
 		)
 	, 
 		(
@@ -31,7 +27,25 @@ AddUser[ username_ ]:=Module[{usersDatasetList},
 		)
 	 ];
 	 
-	 Return Null;
+	 Return[Null];
+	 
+];
+
+(*Funzione che verifica se un determinato username, \[EGrave] presente nel dataset*)
+GetUser[ username_ ]:=Module[{usersDatasetList},
+
+	If[ FileExistsQ[ mainDirectory <> "Data/" <> username <> ".csv" ], 
+		(
+			usersDatasetList = Import[ mainDirectory <> "Data/" <> username <> ".csv", "CSV" ];
+			usersDatasetList = usersDatasetList[[1]];
+			userDataset = usersDatasetList;
+			Return[usersDatasetList];
+		)
+	, 
+		Return[Null];
+	 ];
+	 
+	 Return[Null];
 	 
 ];
 
@@ -40,5 +54,11 @@ SaveUserData[ userData_ ]:=Module[{},
    userDataset = userData;
 ];
 
+GetUserLoadedData[]:=Module[{userDataset},
+	Return[userDataset];
+];
 
+GetMainDirectory[]:=Module[{mainDirectory},
+	Return[mainDirectory];
+];
 
