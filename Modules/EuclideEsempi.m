@@ -11,7 +11,9 @@ Print[Style["Dimostrazione Grafica:","Text",Bold]];
  
  
 Print[Manipulate[Graphics[{
-Line[{{6,2},{6,0}}],
+{EdgeForm[{Dashed}],Dashed,Line[{{6,2},{6,0}}]},
+
+{EdgeForm[{Black}],Line[{{6,-5},{6,0}}]},
 
 {EdgeForm[{Thick,Black}],FaceForm[],Polygon[{{6,2},{10,0},{12,4},{8,6}}]},
 
