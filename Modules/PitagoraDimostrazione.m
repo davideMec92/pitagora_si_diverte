@@ -44,7 +44,7 @@ Todo= Manipulate[Grid[{
 			Text[Style[ "B" ,"Text",Bold],{5.97,2.25}],
 			Text[Style[ "C" ,"Text",Bold],{10.2,-0.2}],
 			If[a == 1,Text[Style[ "H" ,"Text",Bold],{6.2,0.2}],,],
-	 },ImageSize->{600,Scaled[0.5]}], 
+	 },ImageSize->{Scaled[0.35],Scaled[0.5]}], 
 	 Grid[{
 			{If[a==1,Text[Style[Testo1, TextAlignment->Left, LineIndent -> 0]],,]},
 			{""},
