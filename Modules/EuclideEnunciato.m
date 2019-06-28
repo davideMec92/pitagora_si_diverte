@@ -28,8 +28,8 @@ Print[Graphics[{
 			Text[Style[ R ,"Subtitle",Bold],{5.5,-2.7}],
 			
 			Text[Style[ "A" ,"Text",Bold],{4.8,-0.2}],
-			Text[Style[ "B" ,"Text",Bold],{5.97,2.25}],
-			Text[Style[ "C" ,"Text",Bold],{10.2,-0.2}],
+			Text[Style[ "C" ,"Text",Bold],{5.97,2.25}],
+			Text[Style[ "B" ,"Text",Bold],{10.2,-0.2}],
 			
 			Text[Style[ "H" ,"Text",Bold],{6.2,-0.2}],
 			Text[Style[ "F" ,"Text",Bold],{4.8,-5.2}],
