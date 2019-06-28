@@ -35,7 +35,7 @@ Todo= Manipulate[Grid[{
 		{EdgeForm[{Gray}],White, Polygon[{{6,2},{5,0},{3,1},{4,3}}]},
 		{EdgeForm[{Dashed}],Dashed, Opacity[0.7],Line[{{6,2},{6,0}}]},
 		
-		
+		White,Point[{6.2,7.4}],
 		Black,
 			If[a == 0,{Text[Style[ Q ,"Subtitle",Bold],{4.5,1.5}]},,],
 			If[a == 0,{Text[Style[ R ,"Subtitle",Bold],{5.5,-2.7}]},,],
@@ -50,6 +50,7 @@ Todo= Manipulate[Grid[{
 			
 			Text[Style[ "D" ,"Text",Bold],{4,3.2}],
 			Text[Style[ "E" ,"Text",Bold],{2.8,1}],
+			
 			
 			If[a == 0,{Text[Style[ "X" ,"Text",Blue],{8,0}]},,],
 			If[a == 0,{Text[Style[ "X" ,"Text", Blue],{6,-2.7}]},,],
