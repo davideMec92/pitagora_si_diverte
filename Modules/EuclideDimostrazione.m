@@ -127,7 +127,7 @@ Todo= Manipulate[Grid[{
 			If[a == 1,Text[Style[ "H" ,"Text",Bold],{6.2,0.2}],,],
 			
 *)			
-	 },ImageSize->{Scaled[0.35],Scaled[0.5]}], 
+	 },ImageSize->{Scaled[0.29],Scaled[0.5]}], 
 	 Grid[{
 			{Text[Style[Testo0, TextAlignment->Left, LineIndent -> 0]]},
 			{""},
