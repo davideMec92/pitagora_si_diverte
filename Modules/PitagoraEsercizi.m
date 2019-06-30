@@ -26,34 +26,42 @@ ModulePitagoraEsercizi[] := Module[{},
 	
 	While[ ySecondPoint == yFirstPoint, ySecondPoint = GenerateRandomInt[]; ];
 	
-	cartesianPlot = ListPlot[ {{ xFirstPoint, yFirstPoint}, {xSecondPoint, ySecondPoint} }, ImageSize->Large, PlotStyle->{ Dashed, PointSize[Large] }, PlotRange-> {{2.5,2.5}, {2.5,2.5}}, GridLines-> Automatic];
+	cartesianPlot = ListPlot[ {{ xFirstPoint, yFirstPoint}, {xSecondPoint, ySecondPoint} }->{"A","B"}, LabelingFunction->Above, ImageSize->Large, PlotStyle->{ Dashed, PointSize[Large] }, PlotRange-> {{2.5,2.5}, {2.5,2.5}}, GridLines-> Automatic];
    
     Print[cartesianPlot];
     
-	Print[Style[ "Calcola la distanza tra i due punti sul piano cartesiano", "Text"]];
-	(*usernameText = Null;
+    distanceResult = N[Sqrt[ (xFirstPoint - xSecondPoint )^2 + ( yFirstPoint - ySecondPoint )^2 ], 2];
+        
+	Print[Style[ "Calcola la distanza tra i due punti A e B sul piano cartesiano", "Text"]];
+	Print[Style[ "Nel caso di risultato con cifre decimali, arrotondare alla prima cifra", "Text"]];
+		
+	userValue = null;
+	
 	verifyButton = Button[
 				"Verifica",
 				(
-					If [ LoginDone == False, (
-						usernameText = ToLowerCase[usernameText];
-						userListData = AddUser[ usernameText ];						
-						Print[Style[ "Benvenuto/a " <> usernameText, "Text"]];
-						VerifyExe[ userListData, loginButton ];
+					Print["user value: " <> ToString[ userValue - distanceResult ] ];
+					Echo[ "distance: " <> ToString[ N[distanceResult, 2] ] ];
+					If [ EqualTo[ ToExpression[ userValue] ][ ToExpression[ distanceResult ] ], (											
+						Print[Style[ "Risposta esatta", "Text"]];
+						Print[ Image[ Import[FileNameJoin[{ mainDirectory,"checked.png"}]], ImageSize->Tiny] ];
+					), (
+					
+					Print["Risposta errata"];
+					Print[ Image[ Import[FileNameJoin[{ mainDirectory,"error.png"}]], ImageSize->Tiny] ];
 					)
-					];
-						  
+					];						  
 				)
 			];
 					
-	userLoginGrid = Grid[{
+	userExercise2Verify = Grid[{
 		{Row[{
-			InputField[ Dynamic[usernameText], String ],
-			loginButton
+			InputField[ Dynamic[userValue], String ],
+			verifyButton
 		}]} 
 	}, Frame->Transparent];
 	
-	Print[userLoginGrid];*)
+	Print[userExercise2Verify];
 	
 ];
 
