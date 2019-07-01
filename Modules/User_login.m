@@ -15,6 +15,8 @@ GetUserLoginGraphicInterface[]:=DynamicModule[{},
 							usernameText = ToLowerCase[usernameText];
 							userListData = AddUser[ usernameText ];						
 							Print[Style[ "Benvenuto/a " <> usernameText, "Text"]];
+							ClearUserSession[];
+							StartUserSession[ usernameText ];
 							DisplayUserProgress[ userListData, loginButton ];
 						)
 						];

@@ -36,20 +36,29 @@ ModulePitagoraEsercizi[] := Module[{},
 	Print[Style[ "Nel caso di risultato con cifre decimali, arrotondare alla prima cifra", "Text"]];
 		
 	userValue = null;
-	
+		
 	verifyButton = Button[
 				"Verifica",
 				(
-					Print["user value: " <> ToString[ userValue - distanceResult ] ];
 					Echo[ "distance: " <> ToString[ N[distanceResult, 2] ] ];
+					
 					If [ EqualTo[ ToExpression[ userValue] ][ ToExpression[ distanceResult ] ], (											
-						Print[Style[ "Risposta esatta", "Text"]];
+						Print[Style[ "Risposta esatta", "Text"]];						
 						Print[ Image[ Import[FileNameJoin[{ mainDirectory,"checked.png"}]], ImageSize->Tiny] ];
+						userSessionName = GetUserSession[];
+						
+						If[ userSessionName != "", (						
+							userData = AddUser[ userSessionName ];
+							userData[[2]] = 1;
+							SaveUserData[ userData];						
+						) ];
+						
 					), (
 					
-					Print["Risposta errata"];
-					Print[ Image[ Import[FileNameJoin[{ mainDirectory,"error.png"}]], ImageSize->Tiny] ];
+						Print["Risposta errata"];
+						Print[ Image[ Import[FileNameJoin[{ mainDirectory,"error.png"}]], ImageSize->Tiny] ];
 					)
+					
 					];						  
 				)
 			];
