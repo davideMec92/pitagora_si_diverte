@@ -161,7 +161,7 @@ Todo= Manipulate[Grid[{
 			
 			If[p == 1,{Text[Style[ Q ,"Subtitle",Bold],{4.5,1.5}]},,],
 			If[p == 1,{Text[Style[ R ,"Subtitle",Bold],{5.5,-2.7}]},,],
-			If[P == 1 ,{Text[Style[ Q\[DotEqual]R ,"Subtitle",Bold],{9,-3}]},,],
+			If[p == 1 ,{Text[Style[ Q\[DotEqual]R ,"Subtitle",Bold],{9,-3}]},,],
 			
 		
 (*Pitagoras						
