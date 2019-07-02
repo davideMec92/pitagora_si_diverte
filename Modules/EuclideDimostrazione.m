@@ -13,7 +13,7 @@ Qc2= ToString[Subscript["Q","c2"], FormatType -> StandardForm];
 R1= ToString[Subscript["R","1"], FormatType -> StandardForm];
 R2= ToString[Subscript["R","2"], FormatType -> StandardForm];	
 
-Testo0= "Disegnamo il quadrato ACDE ed il rettangolo AFGH in modo che HG\[TildeFullEqual]HB";				
+Testo0= "Disegnamo il quadrato ACDE ed il rettangolo AFGH in modo che AF\[TildeFullEqual]AB";				
 Testo1= "Prolunghiamo il lato ED";
 Testo2= "Prolunghiamo FA e GH fino ad incontrare il prolungamento di ED nei punti M ed N";
 Testo3= "Chiamo \[Alpha] l'angolo CAB e \[Alpha]' l'angolo EAM e \[Beta] l'angolo MAC";
@@ -23,6 +23,14 @@ Testo6= "AC \[TildeFullEqual] AE, essendo un quadrato per costruzione";
 Testo7= "Angoli C \[TildeFullEqual] E, retti per costruzione";
 Testo8= "I Triangoli ABC e AEM sono congruenti per il secondo criterio";
 Testo9= "In Particolare AB\[TildeFullEqual]AM";
+Testo10= "Prendo in considerazione il quadrilatero ACNM, che \[EGrave] un parallelogramma per costruzione, e il quadrato ACDE, Essi hanno";
+Testo11= "La base AC in comune e l'altezza EA in comune";
+Testo12= "Pertanto ACNM \[EGrave] equivalente ad ACDE";
+Testo13= "Prendo in considerazione il parallelogramma ACNM e il rettangolo AFGH, essi hanno";
+Testo14= "Basi AM ed AF congruenti (entrambe congruenti ad AB, per quanto dimostrato al punto 9: AF\[TildeFullEqual]AB\[TildeFullEqual]AM)";
+Testo15= "Stessa altezza AH";
+Testo16= "Pertanto ACNM \[EGrave] equivalente ad AHFG";
+Testo17= "Applicando la propriet\[AGrave] transitiva, poiche ACNM\[DotEqual]ACDE e AFGH\[DotEqual]ACNM, otteniamo che ACDE\[DotEqual]AFGH ovvero Q\[DotEqual]R";
 
 
 
@@ -41,7 +49,7 @@ Todo= Manipulate[Grid[{
 			If[a == 0,{Text[Style[ R ,"Subtitle",Bold],{5.5,-2.7}]},,],
 			
 			Text[Style[ "A" ,"Text",Bold],{4.8,-0.2}],
-			Text[Style[ "C" ,"Text",Bold],{5.97,2.25}],
+			Text[Style[ "C" ,"Text",Bold],{6.2,2.2}],
 			Text[Style[ "B" ,"Text",Bold],{10.2,-0.2}],
 			
 			Text[Style[ "H" ,"Text",Bold],{6.2,-0.2}],
@@ -51,9 +59,11 @@ Todo= Manipulate[Grid[{
 			Text[Style[ "D" ,"Text",Bold],{4,3.2}],
 			Text[Style[ "E" ,"Text",Bold],{2.8,1}],
 			
+			If[i == 0 && i == 0,{Text[Style[ AF\[TildeFullEqual]AB ,"Subtitle",Bold],{9,4}]},,],
 			
-			If[a == 0,{Text[Style[ "X" ,"Text",Blue],{8,0}]},,],
-			If[a == 0,{Text[Style[ "X" ,"Text", Blue],{6,-2.7}]},,],
+			
+			If[i == 0,{Text[Style[ "X" ,"Text",Blue],{8,0}]},,],
+			If[i == 0,{Text[Style[ "X" ,"Text", Blue],{5,-2.7}]},,],
 			
 			(*1*)
 			If[a == 1,{EdgeForm[{Dashed}],Dashed,Line[{{3,1},{6.2,7.4}}]},,],
@@ -104,9 +114,55 @@ Todo= Manipulate[Grid[{
 			
 			(*9*)
 			Orange,
-			If[i == 1,{Line[{{5,0},{5,5}}]},,],
-			If[i == 1,{Line[{{5,0},{10,0}}]},,],
+			If[i == 1 && j==0,{Line[{{5,0},{5,5}}]},,],
+			If[i == 1 && j==0,{Line[{{5,0},{10,0}}]},,],
+			If[i == 1,{Text[Style[ "X" ,"Text", Bold, Orange],{5.02,2.7}]},,],
+			If[i == 1,{Text[Style[ "X" ,"Text", Bold, Orange],{8,0}]},,],
+			If[i == 1,{Text[Style[ "X" ,"Text", Bold, Orange],{5,-2.7}]},,],
 			Black,
+			If[i == 1,{Text[Style[ AF\[TildeFullEqual]AB\[TildeFullEqual]AM ,"Subtitle",Bold],{8.7,4}]},,],
+			
+			(*10*)
+			{FaceForm[{Purple}], Orange,Opacity[(j(1-l))/3],Polygon[{{5,0},{6,2},{6,7},{5,5}}]},
+			{FaceForm[{Purple}], Orange,Opacity[(j(1-l))/3],Polygon[{{6,2},{5,0},{3,1},{4,3}}]},
+			
+			(*11*)
+			
+			If[k == 1 && m==0,{Text[Style[ "X" ,"Subtitle", Bold, Red],{5.52,1}]},,],
+
+			If[k == 1 && m==0,{Text[Style[ "/" ,"Subtitle", Bold, Red],{4,0.5}]},,],
+			
+			(*12*)
+			{FaceForm[{Purple}], LightOrange,Opacity[(l)/4],Polygon[{{5,0},{6,2},{6,7},{5,5}}]},
+			{FaceForm[{Purple}], LightOrange,Opacity[(l)/4],Polygon[{{6,2},{5,0},{3,1},{4,3}}]},
+			
+			If[l == 1 && o==0,{Text[Style[ ACDE\[DotEqual]ACMN ,"Subtitle",Bold],{8.7,3}]},,],
+		
+			
+			(*13*)
+			{FaceForm[{Purple}], LightBlue,Opacity[(m(1-p))/1.5],Polygon[{{5,0},{6,2},{6,7},{5,5}}]},			
+			{FaceForm[{Purple}], LightBlue,Opacity[(m(1-p))/1.5],Polygon[{{5,0},{6,0},{6,-5},{5,-5}}]},
+			
+			(*14*)
+			
+			If[n == 1 && p==0,{Text[Style[ "X" ,"Subtitle", Bold, Orange],{5.02,2.7}]},,],
+			If[n == 1 && p==0,{Text[Style[ "X" ,"Subtitle", Bold, Orange],{8,0}]},,],
+			If[n == 1 && p==0,{Text[Style[ "X" ,"Subtitle", Bold, Orange],{5,-2.7}]},,],
+			
+			(*15*)
+			If[\[NTilde] == 1 && p==0,{Text[Style[ "h" ,"Subtitle", Bold, Orange],{5.5,0}]},,],
+			
+			(*16*)
+			{FaceForm[{Purple}], LightOrange,Opacity[(o)/4],Polygon[{{5,0},{6,2},{6,7},{5,5}}]},
+			{FaceForm[{Purple}], LightOrange,Opacity[(o)/4],Polygon[{{5,0},{6,0},{6,-5},{5,-5}}]},
+			If[o == 1 ,{Text[Style[ ACDE\[DotEqual]ACMN\[DotEqual]AHFG ,"Subtitle",Bold],{8.3,3}]},,],
+			
+			(*17*)
+			
+			If[p == 1,{Text[Style[ Q ,"Subtitle",Bold],{4.5,1.5}]},,],
+			If[p == 1,{Text[Style[ R ,"Subtitle",Bold],{5.5,-2.7}]},,],
+			If[P == 1 ,{Text[Style[ Q\[DotEqual]R ,"Subtitle",Bold],{9,-3}]},,],
+			
 		
 (*Pitagoras						
 		If[a == 1,{EdgeForm[{Dashed}],Dashed,Line[{{6,0},{6,-5}}]},,],
@@ -129,7 +185,7 @@ Todo= Manipulate[Grid[{
 			
 *)			
 	 },ImageSize->{Scaled[0.29],Scaled[0.5]}], 
-	 Grid[{
+	 Grid[{ {""},
 			{Text[Style[Testo0, TextAlignment->Left, LineIndent -> 0]]},
 			{""},
 			{""},
@@ -160,10 +216,28 @@ Todo= Manipulate[Grid[{
 			{If[i==1,Text[Style[Testo9, TextAlignment->Left, LineIndent -> 0]],,]},  
 			{""},
 			{""},
-			{If[j==1,Text[Style[Testo10, TextAlignment->Left, LineIndent -> 0]],,]}, 
+			{If[j==1,Text[Style[Testo10, TextAlignment->Left, LineIndent -> 0]],,]},  
 			{""},
 			{""},
-			{If[k==1,Text[Style[Testo11, TextAlignment->Left, LineIndent -> 0]],,]} 
+			{If[k==1,Text[Style[Testo11, TextAlignment->Left, LineIndent -> 0]],,]},   
+			{""},
+			{""},
+			{If[l==1,Text[Style[Testo12, TextAlignment->Left, LineIndent -> 0]],,]},   
+			{""},
+			{""},
+			{If[m==1,Text[Style[Testo13, TextAlignment->Left, LineIndent -> 0]],,]},   
+			{""},
+			{""},
+			{If[n==1,Text[Style[Testo14, TextAlignment->Left, LineIndent -> 0]],,]},   
+			{""},
+			{""},
+			{If[\[NTilde]==1,Text[Style[Testo15, TextAlignment->Left, LineIndent -> 0]],,]},   
+			{""},
+			{""},
+			{If[o==1,Text[Style[Testo16, TextAlignment->Left, LineIndent -> 0]],,]},   
+			{""},
+			{""},
+			{If[p==1,Text[Style[Testo17, TextAlignment->Left, LineIndent -> 0]],,]}
      },ItemSize->Scaled[0.5], Alignment -> {Left}],}
  }],      
 Row [{Control[{{a, 0, "Passaggio 1"}, {0, 1}}],
@@ -186,7 +260,19 @@ Row [{Control[{{a, 0, "Passaggio 1"}, {0, 1}}],
  Text["   "],
  Control[{{j, 0, "Passaggio 10"}, {0, 1}}], 
  Text["   "],
- Control[{{k, 0, "Passaggio 11"}, {0, 1}}]},
+ Control[{{k, 0, "Passaggio 11"}, {0, 1}}], 
+ Text["   "],
+ Control[{{l, 0, "Passaggio 12"}, {0, 1}}], 
+ Text["   "],
+ Control[{{m, 0, "Passaggio 13"}, {0, 1}}], 
+ Text["   "],
+ Control[{{n, 0, "Passaggio 14"}, {0, 1}}], 
+ Text["   "],
+ Control[{{\[NTilde], 0, "Passaggio 15"}, {0, 1}}], 
+ Text["   "],
+ Control[{{o, 0, "Passaggio 16"}, {0, 1}}], 
+ Text["   "],
+ Control[{{p, 0, "Passaggio 17"}, {0, 1}}]},
  Alignment -> Left],
  ControlPlacement -> Top, 
  FrameMargins -> 0, ContentSize -> Scaled[1]]
