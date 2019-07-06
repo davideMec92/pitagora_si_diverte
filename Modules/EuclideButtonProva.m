@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-ModuleEuclideDimostrazione[]:=EuclideDimostrazione[{},
+ModuleEuclideButtonProva[]:=EuclideButtonProva[{},
 (*Commento*)
 
 Print[Style[ "Dimostrazione del teorema di Euclide","Subsubtitle", Bold]];
@@ -206,6 +206,13 @@ Print[Todo];
 
 	
 Print["\n\n"];
+
+
+
+
+
+
+
 
 
 ];
