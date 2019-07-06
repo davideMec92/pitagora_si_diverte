@@ -94,7 +94,7 @@ Print[Style["Formule del teorema di Pitagora:","Text",Bold]];
 
 Print[EsempioGraficoPit];
 
-Print[Style[ Row[{"Seguendo l'enunciato del teorena di pitagora (indicando con ", Subscript["c","1"], " e ", Subscript["c","2"], " i cateti e con i l'ipotenusa)" }],"Text" ]];
+Print[Style[ Row[{"Seguendo l'enunciato del teorena di pitagora (indicando con '", Subscript["c","1"], "' e '", Subscript["c","2"], "' i cateti e con 'i' l'ipotenusa)" }],"Text" ]];
 
 Print[Style[Row[{ "i"^2 , " = ", Subscript["c","1"]^2, "+",  Subscript["c","2"]^2 }],"Subsubtitle"]];
 
@@ -135,13 +135,14 @@ EsempioGraficoPit2= Graphics[{
 			Text[Style[ "C" ,"Text",Bold],{10.2,-0.2}],
 			Text[Style[ "AC=5" ,"Text"],{7,-0.3}],
 			Text[Style[ "AB=3" ,"Text"],{5.4,1.5}],
-			Text[Style[ "BC=?" ,"Text"],{7,1.2}],
+			Text[Style[ "BC=?" ,"Text"],{7.5,1.5}],
 			
 
 	},ImageSize->{600,500},
 Axes->False];
-
+Print[Style[ Row[{"Di un Rettangolo ABC retto in B, conosciamo la lunghezza dell'ipotenusa AC e del cateto BC rispettivamente AC=5 cm e AB=3 cm." }],"Text" ]];
+Print[Style[ Row[{"Vogliamo trovare la lunghezza del cateto CB" }],"Text" ]];
 Print[EsempioGraficoPit2];
-Print[Style[ Row[{"Di un Rettangolo ABC retto in B, conosciamo la lunghezza dell'ipotenusa AC e del cateto BC rispettivamente AC=5 e AB=3. Vogliamo trovare la lunghezza del cateto CB" }],"Text" ]];
+
 
 ];
