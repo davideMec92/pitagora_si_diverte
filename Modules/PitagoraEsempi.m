@@ -66,7 +66,82 @@ GeometricTransformation[
 {DimostrazioneGrafica,0,1}]];
 	Print["\n\n"];
 
+
+
+
+EsempioGraficoPit= Graphics[{
+
+	{EdgeForm[{Gray}],LightBlue,Polygon[{{6,2},{10,0},{12,4},{8,6}}]},
+	{EdgeForm[{Gray}],LightPurple,Rectangle[{5,0},{10,-5}]},
+	{EdgeForm[{Gray}],LightGray,Triangle[{{5,0},{6,2},{10,0}}]},
+	{EdgeForm[{Blue}],LightGray, Polygon[{{6,2},{6.2,1.9},{6.1,1.7},{5.9,1.8}}]},  (*Rett-angolo*)
+
+	{EdgeForm[{Gray}],LightRed,Polygon[{{6,2},{5,0},{3,1},{4,3}}]},
+			Black,
+			Text[Style[ Subscript["c","1"]^2 ,"Subtitle",Bold],{4.5,1.5}],
+			Text[Style[ Subscript["c","2"]^2 ,"Subtitle",Bold],{9,3}],
+			Text[Style[ "i"^2 ,"Subtitle",Bold],{7.5,-2.5}],
+			Text[Style[ "A" ,"Text",Bold],{4.8,-0.2}],
+			Text[Style[ "B" ,"Text",Bold],{5.97,2.25}],
+			Text[Style[ "C" ,"Text",Bold],{10.2,-0.2}],
+			
+			
+
+	},ImageSize->{600,500},
+Axes->False];
+
+Print[Style["Formule del teorema di Pitagora:","Text",Bold]];
+
+Print[EsempioGraficoPit];
+
+Print[Style[ Row[{"Seguendo l'enunciato del teorena di pitagora (indicando con ", Subscript["c","1"], " e ", Subscript["c","2"], " i cateti e con i l'ipotenusa)" }],"Text" ]];
+
+Print[Style[Row[{ "i"^2 , " = ", Subscript["c","1"]^2, "+",  Subscript["c","2"]^2 }],"Subsubtitle"]];
+
+Print[Style[ "possiamo ricavare le seguenti uguaglianze","Text"]];
+
+Print[Style[Row[{ Subscript["c","1"]^2 , " = ", "i"^2, "-",  Subscript["c","2"]^2   }],"Subsubtitle"]];
+Print[Style[Row[{ Subscript["c","2"]^2 , " = ", "i"^2, "-",  Subscript["c","1"]^2   }],"Subsubtitle"]];
+
+
+Print[Style[ "E da questi, a loro volta possiamo ricavare le seguenti formule per il calcolo delle misure dei lati, applicando la radice quadrata","Text"]];
+
+Primo= ToString[Subscript["c","1"]^2, FormatType -> StandardForm];	
+Secondo= ToString[ Subscript["c","2"]^2,  FormatType -> StandardForm];	
+Terzo= ToString[ Subscript["i",""]^2,  FormatType -> StandardForm];
+Radish1= Primo <> "+" <> Secondo;
+Radish2= Terzo <> "-" <> Secondo;
+Radish3= Terzo <> "-" <> Primo;
+
+
+
+Print[Style[Row[{ "i" , " = ", Sqrt[Radish1]  }],"Subsubtitle"]];
+Print[Style[Row[{ Subscript["c","1"] , " = ", Sqrt[Radish2]   }],"Subsubtitle"]];
+Print[Style[Row[{ Subscript["c","2"] , " = ", Sqrt[Radish3]  }],"Subsubtitle"]];
+
 Print["\n"];
 
+Print[Style["Esercizio svolto:","Text",Bold]];
+
+EsempioGraficoPit2= Graphics[{
+
+
+	{EdgeForm[{Gray}],White,Triangle[{{5,0},{6,2},{10,0}}]},
+	{EdgeForm[{Blue}],White, Polygon[{{6,2},{6.2,1.9},{6.1,1.7},{5.9,1.8}}]},  (*Rett-angolo*)
+
+			Black,
+			Text[Style[ "A" ,"Text",Bold],{4.8,-0.2}],
+			Text[Style[ "B" ,"Text",Bold],{5.97,2.25}],
+			Text[Style[ "C" ,"Text",Bold],{10.2,-0.2}],
+			Text[Style[ "AC=5" ,"Text"],{7,-0.3}],
+			Text[Style[ "AB=3" ,"Text"],{5.4,1.5}],
+			Text[Style[ "BC=?" ,"Text"],{7,1.2}],
+			
+
+	},ImageSize->{600,500},
+Axes->False];
+
+Print[EsempioGraficoPit2];
+Print[Style[ Row[{"Di un Rettangolo ABC retto in B, conosciamo la lunghezza dell'ipotenusa AC e del cateto BC rispettivamente AC=5 e AB=3. Vogliamo trovare la lunghezza del cateto CB" }],"Text" ]];
 
 ];
