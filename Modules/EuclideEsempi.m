@@ -8,9 +8,8 @@ Print[Style["Dimostrazione Grafica:","Text",Bold]];
 (* Dimostrazione grafica del teorema di Euclide, sul cateto maggiore
  Viene creata con dei poligoni colorati che subiscono delle rotazioni/translazioni
  in relazione al valore importato dallo slider che e' nominato DimostrazioneGrafica *)
- 
- 
-Print[Manipulate[Graphics[{
+
+demonstrationManipulate = Manipulate[Graphics[{
 {EdgeForm[{Dashed}],Dashed,Line[{{6,2},{6,0}}]},
 
 {EdgeForm[{Black}],Line[{{6,-5},{6,0}}]},
@@ -64,10 +63,74 @@ GeometricTransformation[
 
 },ImageSize->{600,500},
 		Axes->False],
-{DimostrazioneGrafica,0,1}]];
-	Print["\n\n"];
+{DimostrazioneGrafica,0,1}]; 
 
-Print["\n"];
+Print[ demonstrationManipulate ];
 
+EuclideEsempio2[];
+
+];
+
+EuclideEsempio2[]:=Module[{},
+
+Print[Style[ "Teorema di Euclide - Spiegazione matematica","Subsubtitle", Bold]];
+
+esempio2Grafico = Graphics[{
+
+	{EdgeForm[{Gray}],LightPurple,Rectangle[{5,0},{6,-5}]},
+	{EdgeForm[{Gray}],LightGray,Triangle[{{5,0},{6,2},{10,0}}]},
+
+	{EdgeForm[{Gray}],LightPurple, Polygon[{{6,2},{5,0},{3,1},{4,3}}]},
+	
+	{EdgeForm[{Blue}],LightGray, Polygon[{{6,2},{6.2,1.9},{6.1,1.7},{5.9,1.8}}]},  (*Rett-angolo*)
+	{EdgeForm[{Dashed}],Dashed, Opacity[0.7],Line[{{6,2},{6,0}}]},
+	
+			Black,
+			Text[Style[ Q ,"Subtitle",Bold],{4.5,1.5}],
+			Text[Style[ R ,"Subtitle",Bold],{5.5,-2.7}],
+			
+			Text[Style[ "A" ,"Text",Bold],{4.8,-0.2}],
+			Text[Style[ "C" ,"Text",Bold],{5.97,2.25}],
+			Text[Style[ "B" ,"Text",Bold],{10.2,-0.2}],
+			
+			Text[Style[ "H" ,"Text",Bold],{6.2,-0.2}],
+			Text[Style[ "F" ,"Text",Bold],{4.8,-5.2}],
+			Text[Style[ "G" ,"Text",Bold],{6.2,-5.2}],
+			
+			Text[Style[ "D" ,"Text",Bold],{4,3.2}],
+			Text[Style[ "E" ,"Text",Bold],{2.8,1}],
+			
+			Text[Style[ Q\[DotEqual]R ,"Subtitle",Bold],{9,3}],
+		
+	},ImageSize->{600,500},
+Axes->False];
+	
+Print[esempio2Grafico];
+
+Print[Style[ "Seguendo l'enunciato del primo teorema di Euclide avremo che","Text"]];
+
+Print[Style[Row[{"AC"^2, " = AH x AB"}],"Subsubtitle", Bold] ];
+
+Print[Style[Row[{"AC"^2, " rappresenta l'area del quadrato costruito sul cateto AC, mentre AH x AB \[EGrave] l'area del rettangolo che ha per dimensioni la proiezione
+del cateto AC sull'ipotenusa e l'ipotenusa stessa "}],"Text"] ];
+
+loginButton = Button[
+					"medio proporzionale",
+					(
+						MessageDialog[ "Date due grandezze A e B, il medio proporzionale M \[EGrave] dato da: A:M = M: B"];
+					)
+				];
+
+Print[Style[ Row[{"Alla luce di questo possiamo affermare che: in un triangolo rettangolo, ciascun cateto \[EGrave] il ", loginButton, "tra l'ipotenusa e la proiezione
+del cateto sull'ipotenusa" }] ,"Text"]];
+
+Print[Style[ "In formule questo si traduce nelle seguenti proporzioni: ","Text"]];
+
+Print[Style[Row[{"AB : CB = CB : HB"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"AB : AC = AC : AH"}],"Subsubtitle", Bold] ];
+
+Print[Style["Esempio esercizio","Subsubtitle", Bold] ];
+
+Print[Style[ "Calcolare il perimetro di un triangolo rettangolo ","Text"]];
 
 ];
