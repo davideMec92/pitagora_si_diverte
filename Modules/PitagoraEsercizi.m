@@ -6,10 +6,22 @@ xSecondPoint = null;
 ySecondPoint = null;
 
 ModulePitagoraEsercizi[] := Module[{},
+
+(*test = True;
+
+If[test \[Equal] True, 
+(
 	PitagoraEsercizio1[];
 	PitagoraEsercizio2[];
 	PitagoraEsercizio3[];
 	PitagoraEsercizio4[];
+ ), Print["Devi completare la sezione su Euclide prima!"]; ];*)
+ 
+ PitagoraEsercizio1[];
+ PitagoraEsercizio2[];
+ PitagoraEsercizio3[];
+ PitagoraEsercizio4[];
+	
 ];
 
 PitagoraEsercizio1[] := Module[{},
@@ -28,24 +40,39 @@ PitagoraEsercizio1[] := Module[{},
 	verifyButton1 = Button[
 				"Verifica",
 				(	
-					If [ EqualTo[ ToExpression[ userValue1 ] ][ ToExpression[ resultEx1 ] ], (											
-						Print[Style[ "Risposta esatta", "Text"]];						
-						Print[ Image[ Import[FileNameJoin[{ mainDirectory,"checked.png"}]], ImageSize->Tiny] ];
-						userSessionName = GetUserSession[];
+					userSessionName = GetUserSession[];
 						
-						If[ userSessionName != "", (						
-							userData = AddUser[ userSessionName ];
+					If[ userSessionName != "", (
+											
+						userData = AddUser[ userSessionName ];
+							
+						If[ GetPitagoraExercise1[userData] == 1, 
+						(
+							MessageDialog[ "Hai gi\[AGrave] completato con successo questo esercizio!"];
+						),
+						(
+							If [ EqualTo[ ToExpression[ userValue1 ] ][ ToExpression[ resultEx1 ] ], (											
+							(*Print[Style[ "Risposta esatta", "Text"]];						
+							Print[ Image[ Import[FileNameJoin[{ NotebookDirectory[],"Images/checked.png"}]], ImageSize->Tiny] ];*)
+							userSessionName = GetUserSession[];
+						
 							userData[[GetIndexEx1Pitagora[]]] = 1;
-							SaveUserData[ userData];				
+							SaveUserData[ userData];
+							MessageDialog[ "Complimenti, risposta esatta!"];
+							), (
+					
+							(*Print["Risposta errata"];
+							Print[ Image[ Import[FileNameJoin[{ NotebookDirectory[],"Images/error.png"}]], ImageSize->Tiny] ];*)
+						
+							MessageDialog[ "Risposta errata, riprova!"];
+							)];
+							
 						) ];
 						
-					), (
-					
-						Print["Risposta errata"];
-						Print[ Image[ Import[FileNameJoin[{ mainDirectory,"error.png"}]], ImageSize->Tiny] ];
-					)
-					
-					];						  
+					),(
+						MessageDialog[ "Esegui prima il login, per svolgere gli esercizi"];
+					)];
+											  
 				)
 			];
 					
@@ -79,24 +106,38 @@ PitagoraEsercizio2[] := Module[{},
 	verifyButton2 = Button[
 				"Verifica",
 				(	
-					If [ EqualTo[ ToExpression[ userValue2 ] ][ ToExpression[ resultEx2 ] ], (											
-						Print[Style[ "Risposta esatta", "Text"]];						
-						Print[ Image[ Import[FileNameJoin[{ mainDirectory,"checked.png"}]], ImageSize->Tiny] ];
-						userSessionName = GetUserSession[];
+					userSessionName = GetUserSession[];
 						
-						If[ userSessionName != "", (						
-							userData = AddUser[ userSessionName ];
+					If[ userSessionName != "", (
+											
+						userData = AddUser[ userSessionName ];
+							
+						If[ GetPitagoraExercise2[userData] == 1, 
+						(
+							MessageDialog[ "Hai gi\[AGrave] completato con successo questo esercizio!"];
+						),
+						(
+							If [ EqualTo[ ToExpression[ userValue2 ] ][ ToExpression[ resultEx2 ] ], (											
+							(*Print[Style[ "Risposta esatta", "Text"]];						
+							Print[ Image[ Import[FileNameJoin[{ NotebookDirectory[],"Images/checked.png"}]], ImageSize->Tiny] ];*)
+							userSessionName = GetUserSession[];
+						
 							userData[[GetIndexEx2Pitagora[]]] = 1;
-							SaveUserData[ userData];				
+							SaveUserData[ userData];
+							MessageDialog[ "Complimenti, risposta esatta!"];
+							), (
+					
+							(*Print["Risposta errata"];
+							Print[ Image[ Import[FileNameJoin[{ NotebookDirectory[],"Images/error.png"}]], ImageSize->Tiny] ];*)
+						
+							MessageDialog[ "Risposta errata, riprova!"];
+							)];
+							
 						) ];
 						
-					), (
-					
-						Print["Risposta errata"];
-						Print[ Image[ Import[FileNameJoin[{ mainDirectory,"error.png"}]], ImageSize->Tiny] ];
-					)
-					
-					];						  
+					),(
+						MessageDialog[ "Esegui prima il login, per svolgere gli esercizi"];
+					)];						  
 				)
 			];
 					
@@ -149,24 +190,40 @@ PitagoraEsercizio3[] := Module[{},
 	verifyButton3 = Button[
 				"Verifica",
 				(	
-					If [ EqualTo[ ToExpression[ userValue3 ] ][ ToExpression[ resultEx3 ] ], (											
-						Print[Style[ "Risposta esatta", "Text"]];						
-						Print[ Image[ Import[FileNameJoin[{ mainDirectory,"checked.png"}]], ImageSize->Tiny] ];
-						userSessionName = GetUserSession[];
+				
+					userSessionName = GetUserSession[];
 						
-						If[ userSessionName != "", (						
-							userData = AddUser[ userSessionName ];
+					If[ userSessionName != "", (
+											
+						userData = AddUser[ userSessionName ];
+							
+						If[ GetPitagoraExercise3[userData] == 1, 
+						(
+							MessageDialog[ "Hai gi\[AGrave] completato con successo questo esercizio!"];
+						),
+						(
+							If [ EqualTo[ ToExpression[ userValue3 ] ][ ToExpression[ resultEx3 ] ], (											
+							(*Print[Style[ "Risposta esatta", "Text"]];						
+							Print[ Image[ Import[FileNameJoin[{ NotebookDirectory[],"Images/checked.png"}]], ImageSize->Tiny] ];*)
+							userSessionName = GetUserSession[];
+						
 							userData[[GetIndexEx3Pitagora[]]] = 1;
-							SaveUserData[ userData];				
+							SaveUserData[ userData];
+							MessageDialog[ "Complimenti, risposta esatta!"];
+							), (
+					
+							(*Print["Risposta errata"];
+							Print[ Image[ Import[FileNameJoin[{ NotebookDirectory[],"Images/error.png"}]], ImageSize->Tiny] ];*)
+						
+							MessageDialog[ "Risposta errata, riprova!"];
+							)];
+							
 						) ];
 						
-					), (
-					
-						Print["Risposta errata"];
-						Print[ Image[ Import[FileNameJoin[{ mainDirectory,"error.png"}]], ImageSize->Tiny] ];
-					)
-					
-					];						  
+					),(
+						MessageDialog[ "Esegui prima il login, per svolgere gli esercizi"];
+					)];		
+							  
 				)
 			];
 					
@@ -219,24 +276,39 @@ PitagoraEsercizio4[] := Module[{},
 				(
 					Echo[ "distance: " <> ToString[ N[distanceResult, 2] ] ];
 					
-					If [ EqualTo[ ToExpression[ userValue4 ] ][ ToExpression[ distanceResult ] ], (											
-						Print[Style[ "Risposta esatta", "Text"]];						
-						Print[ Image[ Import[FileNameJoin[{ mainDirectory,"checked.png"}]], ImageSize->Tiny] ];
-						userSessionName = GetUserSession[];
+					userSessionName = GetUserSession[];
 						
-						If[ userSessionName != "", (						
-							userData = AddUser[ userSessionName ];
+					If[ userSessionName != "", (
+											
+						userData = AddUser[ userSessionName ];
+							
+						If[ GetPitagoraExercise4[userData] == 1, 
+						(
+							MessageDialog[ "Hai gi\[AGrave] completato con successo questo esercizio!"];
+						),
+						(
+							If [ EqualTo[ ToExpression[ userValue4 ] ][ ToExpression[ distanceResult ] ], (											
+							(*Print[Style[ "Risposta esatta", "Text"]];						
+							Print[ Image[ Import[FileNameJoin[{ NotebookDirectory[],"Images/checked.png"}]], ImageSize->Tiny] ];*)
+							userSessionName = GetUserSession[];
+						
 							userData[[GetIndexEx4Pitagora[]]] = 1;
-							SaveUserData[ userData];						
+							SaveUserData[ userData];
+							MessageDialog[ "Complimenti, risposta esatta!"];
+							), (
+					
+							(*Print["Risposta errata"];
+							Print[ Image[ Import[FileNameJoin[{ NotebookDirectory[],"Images/error.png"}]], ImageSize->Tiny] ];*)
+						
+							MessageDialog[ "Risposta errata, riprova!"];
+							)];
+							
 						) ];
 						
-					), (
-					
-						Print["Risposta errata"];
-						Print[ Image[ Import[FileNameJoin[{ mainDirectory,"error.png"}]], ImageSize->Tiny] ];
-					)
-					
-					];						  
+					),(
+						MessageDialog[ "Esegui prima il login, per svolgere gli esercizi"];
+					)];
+									  
 				)
 			];
 					
@@ -259,21 +331,21 @@ GenerateRandomInt[] := Module[{ randomInt },
 ];
 
 GetIndexEx1Pitagora[]:=Module[{index},
-   index = 2;
-   Return[index];
-];
-
-GetIndexEx2Pitagora[]:=Module[{index},
-   index = 3;
-   Return[index];
-];
-
-GetIndexEx3Pitagora[]:=Module[{index},
    index = 4;
    Return[index];
 ];
 
-GetIndexEx4Pitagora[]:=Module[{index},
+GetIndexEx2Pitagora[]:=Module[{index},
    index = 5;
+   Return[index];
+];
+
+GetIndexEx3Pitagora[]:=Module[{index},
+   index = 6;
+   Return[index];
+];
+
+GetIndexEx4Pitagora[]:=Module[{index},
+   index = 7;
    Return[index];
 ];

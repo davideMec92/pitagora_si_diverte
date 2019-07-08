@@ -1,7 +1,13 @@
 (* ::Package:: *)
 
 ModuleEuclideEsempi[]:=EuclideEsempi[{},
-(*Commento*)
+
+EuclideEsempio1[];
+EuclideEsempio2[];
+
+];
+
+EuclideEsempio1[]:=Module[{},
 
 Print[Style["Dimostrazione Grafica:","Text",Bold]];
 
@@ -66,8 +72,6 @@ GeometricTransformation[
 {DimostrazioneGrafica,0,1}]; 
 
 Print[ demonstrationManipulate ];
-
-EuclideEsempio2[];
 
 ];
 
@@ -150,7 +154,7 @@ Print[esempio3Grafico];
 Print[Style[ "Calcolare il perimetro del triangolo rettangolo la cui ipotenusa misura 10 cm e la proiezione del cateto minore sull'ipotenusa misura 3,6 cm","Text"]];
 
 Print[Style["Risoluzione","Subsubtitle", Bold] ];
-Print[Style[ "Conosciamo l'ipotenusa AB = 8 cm e la proiezione del cateto minore sull'ipotenusa AH = 2 cm. Grazie al primo teorema di Euclide 
+Print[Style[ "Conosciamo l'ipotenusa AB = 10 cm e la proiezione del cateto minore sull'ipotenusa AH = 3.6 cm. Grazie al primo teorema di Euclide 
 possiamo costruire la proporzione per calcolare la lunghezza del cateto minore AC : ","Text"]];
 
 Print[Style[Row[{"AB : AC = AC : AH"}],"Subsubtitle", Bold] ];

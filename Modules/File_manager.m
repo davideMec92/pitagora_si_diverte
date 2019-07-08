@@ -20,7 +20,7 @@ AddUser[ username_ ]:=Module[{userDataset},
 		)
 	, 
 		(
-			usersDatasetList = {username, 0, 0, 0, 0};
+			usersDatasetList = {username, 0, 0, 0, 0, 0, 0};
 			Export[ NotebookDirectory[] <> "Data/" <> username <> ".csv",  {usersDatasetList} ]; 
 			userDataset = usersDatasetList;
 			Return [usersDatasetList];

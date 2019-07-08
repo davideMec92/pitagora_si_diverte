@@ -41,17 +41,28 @@ DisplayUserProgress[ userData_, loginButton_ ]:=Module[{},
 		Print[Style[ "Ecco i tuoi progressi", "Text"]];
 		mainDirectory = NotebookDirectory[] <> "Images/";
 	
-		ex1 = FileNameJoin[{ mainDirectory,"error.png"}];
-		ex2 = FileNameJoin[{ mainDirectory,"error.png"}];
-		ex3 = FileNameJoin[{ mainDirectory,"error.png"}];
+		euclideEx1 = FileNameJoin[{ mainDirectory,"error.png"}];
+		euclideEx2 = FileNameJoin[{ mainDirectory,"error.png"}];
+		pitagoraEx1 = FileNameJoin[{ mainDirectory,"error.png"}];
+		pitagoraEx2 = FileNameJoin[{ mainDirectory,"error.png"}];
+		pitagoraEx3 = FileNameJoin[{ mainDirectory,"error.png"}];
+		pitagoraEx4 = FileNameJoin[{ mainDirectory,"error.png"}];
 	
-		If[ GetExercise1[userData] == 1, ex1 = FileNameJoin[{ mainDirectory,"checked.png"}] ];
-		If[ GetExercise2[userData] == 1, ex2 = FileNameJoin[{ mainDirectory,"checked.png"}] ];
-		If[ GetExercise3[userData] == 1, ex3 = FileNameJoin[{ mainDirectory,"checked.png"}] ];	
+		If[ GetEuclideExercise1[userData] == 1, euclideEx1 = FileNameJoin[{ mainDirectory,"checked.png"}] ];
+		If[ GetEuclideExercise2[userData] == 1, euclideEx2 = FileNameJoin[{ mainDirectory,"checked.png"}] ];
+		If[ GetPitagoraExercise1[userData] == 1, pitagoraEx1 = FileNameJoin[{ mainDirectory,"checked.png"}] ];
+		If[ GetPitagoraExercise2[userData] == 1, pitagoraEx2 = FileNameJoin[{ mainDirectory,"checked.png"}] ];
+		If[ GetPitagoraExercise3[userData] == 1, pitagoraEx3 = FileNameJoin[{ mainDirectory,"checked.png"}] ];
+		If[ GetPitagoraExercise4[userData] == 1, pitagoraEx4 = FileNameJoin[{ mainDirectory,"checked.png"}] ];	
 	
 		userProgressgrid = Grid[{
-		{"Esercizio 1","Esercizio 2", "Esercizio 3"},
-		{Image[ Import[ex1], ImageSize->Tiny], Image[ Import[ex2], ImageSize->Tiny], Image[ Import[ex3], ImageSize->Tiny] } }, Frame->None ];
+		{"Eculide Es.1", "Euclide es.2", "Pitagora es.1", "Pitagora es.2", "Pitagora es.3", "Pitagora es.4"},
+		{Image[ Import[euclideEx1], ImageSize->Tiny],
+		 Image[ Import[euclideEx2], ImageSize->Tiny],
+		 Image[ Import[pitagoraEx1], ImageSize->Tiny],
+		 Image[ Import[pitagoraEx2], ImageSize->Tiny],
+		 Image[ Import[pitagoraEx3], ImageSize->Tiny],
+		 Image[ Import[pitagoraEx4], ImageSize->Tiny] } }, Frame->None ];
 	
 		Print[userProgressgrid];
 		LoginDone = True;		
