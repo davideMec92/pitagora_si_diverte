@@ -144,5 +144,28 @@ Print[Style[ Row[{"Di un Rettangolo ABC retto in B, conosciamo la lunghezza dell
 Print[Style[ Row[{"Vogliamo trovare la lunghezza del cateto CB" }],"Text" ]];
 Print[EsempioGraficoPit2];
 
+Print[Style[ Row[{"Svolgimento:" }],"Text", Bold ]];
+
+Print[Style[ Row[{"Dalle formule relative al teorema di Pitagora sappiamo che, data la lunghezza di un cateto e quella dell'ipotenusa \[EGrave] possibile ricavare la lunghezza del cateto rimasto:" }],"Text" ]];
+
+AltroCateto= ToString[ Subscript["Altro Cateto",""]^2,  FormatType -> StandardForm];
+Ipotenusa= ToString[ Subscript["Ipotenusa",""]^2,  FormatType -> StandardForm];
+Radish4= Ipotenusa <> " - " <> AltroCateto;
+Print[Style[Row[{ "Cateto" , " = ", Sqrt[Radish4]  }],"Text"]];
+
+Print[Style[ Row[{"Ottenuamo cos\[IGrave]" }],"Text" ]];
+
+AC= ToString[ Subscript["AC",""]^2,  FormatType -> StandardForm];
+BC= ToString[ Subscript["BC",""]^2,  FormatType -> StandardForm];
+Radish5= AC <> " - " <> BC;
+
+V5= ToString[ Subscript["5",""]^2,  FormatType -> StandardForm];
+N9= ToString[ Subscript["3",""]^2,  FormatType -> StandardForm];
+Radish6= V5 <> " - " <> N9;
+
+
+
+Print[Style[Row[{ "CB" , " = ", Sqrt[Radish5], " = ", Sqrt[Radish6], " = ", Sqrt["25 - 9"], " = ", Sqrt["16"], " = ", "4"   }],"Text"]];
+
 
 ];
