@@ -139,15 +139,15 @@ esempio3Grafico = Graphics[{
 			Text[Style[ "A" ,"Text",Bold],{4.8,-0.2}],
 			Text[Style[ "C" ,"Text",Bold],{5.97,2.25}],
 			Text[Style[ "B" ,"Text",Bold],{10.2,-0.2}],
-			Text[Style[ "8 cm" ,"Text",Bold],{7.5, -0.2}],
-			Text[Style[ "2 cm" ,"Text",Bold],{5.5, -0.2}],
+			Text[Style[ "10 cm" ,"Text",Bold],{7.5, -0.2}],
+			Text[Style[ "3,6 cm" ,"Text",Bold],{5.5, -0.2}],
 			Text[Style[ "H" ,"Text",Bold],{6.2,-0.2}]
 	},ImageSize-> Medium,
 Axes->False];
 
 Print[esempio3Grafico];
 
-Print[Style[ "Calcolare il perimetro del triangolo rettangolo la cui ipotenusa misura 10 cm e la proiezione del cateto minore sull'ipotenusa misura 2 cm","Text"]];
+Print[Style[ "Calcolare il perimetro del triangolo rettangolo la cui ipotenusa misura 10 cm e la proiezione del cateto minore sull'ipotenusa misura 3,6 cm","Text"]];
 
 Print[Style["Risoluzione","Subsubtitle", Bold] ];
 Print[Style[ "Conosciamo l'ipotenusa AB = 8 cm e la proiezione del cateto minore sull'ipotenusa AH = 2 cm. Grazie al primo teorema di Euclide 
@@ -157,30 +157,30 @@ Print[Style[Row[{"AB : AC = AC : AH"}],"Subsubtitle", Bold] ];
 
 Print[Style[ "Sostituendo i dati avremo: ","Text"]];
 
-Print[Style[Row[{"8 : AC = AC : 2"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"10 : AC = AC : 3,6"}],"Subsubtitle", Bold] ];
 
 Print[Style[ "Utilizzando la propriet\[AGrave] fondamentale delle proporzioni otteniamo: ","Text"]];
 
-Print[Style[Row[{"AC"^2, " = ", " 8 x 2"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"AC"^2, " = ", " 10 x 3,6"}],"Subsubtitle", Bold] ];
 
-Print[Style[Row[{"AC = ", "\!\(\*SqrtBox[\(16\)]\)", " = 4 cm"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"AC = ", "\!\(\*SqrtBox[\(36\)]\)", " = 6 cm"}],"Subsubtitle", Bold] ];
 
 Print[Style[ "Possiamo ricavare adesso BH come differenza (AB - AH) :","Text"]];
 
-Print[Style[Row[{"BH", " = ", " 8 - 2 = 6 cm"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"BH", " = ", " 10 - 3,6 = 6,4 cm"}],"Subsubtitle", Bold] ];
 
 Print[Style[ "Utilizziamo infine il teorema di Euclide per determinare la lunghezza del cateto maggiore BC :","Text"]];
 
 Print[Style[Row[{"AB : BC = BC : BH"}],"Subsubtitle", Bold] ];
 
-Print[Style[Row[{"8 : BC = BC : 6"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"10 : BC = BC : 6,4"}],"Subsubtitle", Bold] ];
 
-Print[Style[Row[{"BC"^2, " = ", " 8 x 6"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"BC"^2, " = ", " 10 x 6,4"}],"Subsubtitle", Bold] ];
 
-Print[Style[Row[{"BC = ", "\!\(\*SqrtBox[\(48\)]\)", " = 6.93 cm"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"BC = ", "\!\(\*SqrtBox[\(64\)]\)", " = 8 cm"}],"Subsubtitle", Bold] ];
 
 Print[Style[ "Infine il perimetro P \[EGrave] dato dalla somma della lunghezza dei lati ottenuti: ","Text"]];
 
-Print[Style[Row[{"P = AB + BC + AC = 8 + 6.93 + 4 = 18.93 cm"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"P = AB + BC + AC = 10 + 8 + 6 = 24 cm"}],"Subsubtitle", Bold] ];
 
 ];
