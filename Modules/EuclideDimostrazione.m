@@ -192,9 +192,9 @@ Todo= Manipulate[Grid[{
 	
  }}],      
 Row [
-{Button["Back", If[x>0,(passaggiList[[x]]=0; x--;)]],
-Button["Next", If[x<17,(x++; passaggiList[[x]]=1;)]]},
- Alignment -> Left],
+{Button["Precedente", If[x>0,(passaggiList[[x]]=0; x--;)], ImageSize -> 200],
+Button["Prossimo", If[x<17,(x++; passaggiList[[x]]=1;)], ImageSize -> 200]},
+ Alignment -> Center],
  ControlPlacement -> Top, 
  FrameMargins -> 0, ContentSize -> Scaled[1]]
 ;
