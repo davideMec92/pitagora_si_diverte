@@ -168,4 +168,46 @@ Radish6= V5 <> " - " <> N9;
 Print[Style[Row[{ "CB" , " = ", Sqrt[Radish5], " = ", Sqrt[Radish6], " = ", Sqrt["25 - 9"], " = ", Sqrt["16"], " = ", "4"   }],"Text"]];
 
 
+Print["\n\n"];
+
+Print[Style["Applicazione pratica delle formule del teorema: Distanza tra punti in un piano","Subtitle",Bold]];
+
+Print[Style[ Row[{" Con distanza tra due punti nel piano cartesiano (o distanza euclidea) ci si riferisce alla formula che permette di calcolare la distanza tra due punti a partire dalle coordinate cartesiane." }],"Text" ]];
+Print[Style[ Row[{" tale distanza \[EGrave] per definizione non negativa, dunque \[EGrave] positiva oppure \[EGrave] nulla nel caso in cui i due punti coincidano." }],"Text" ]];
+
+	cartesianPlot1 = ListPlot[ {{ 1, 1}, {4, 4} }->{Subscript["P","1"],Subscript["P","2"]}, LabelingFunction->Above, ImageSize->Large, PlotStyle->{ Dashed, PointSize[Large] }, PlotRange-> {{2.5,2.5}, {2.5,2.5}}, GridLines-> Automatic];
+   
+    Print[cartesianPlot1];
+
+Print[Style[ Row[{" Dati due punti nel piano cartesiano caratterizzati ciscuno da una coppia di coordinate cartesiane (ascissa,ordinata)" }],"Text" ]];
+Print[Style[ Row[{" Per calcolare la distanza euclidea tra due punti", Subscript["P","1"], " ", Subscript["P","2"], " indicandola con d(", Subscript["P","1"], " ", Subscript["P","2"], ")"}],"Text" ]];
+Print[Style[ Row[{" Possiamo costruire un triangolo rettangolo in cui il segmento cercato ", Subscript["P","1"], Subscript["P","2"], " \[EGrave] l'ipotenusa, ed utilizzare quindi il teorema di Pitagora. " }],"Text" ]];
+Print[Style[ Row[{" Essendo i due cateti paralleli agli assi, sappiamo calcolarne facilmente la lunghezza." }],"Text" ]];
+
+	cartesianPlot2 = ListPlot[ {{ 1, 1}, {4, 4}, {4,1}, {1,1} }->{Subscript["P","1"],Subscript["P","2"], "", ""}, LabelingFunction->Above, ImageSize->Large, PlotStyle->{ Dashed, PointSize[Large] }, Joined->True, PlotRange-> {{2.5,2.5}, {2.5,2.5}}, GridLines-> Automatic];
+   
+    Print[cartesianPlot2];
+
+
+Print["\n\n"];
+
+Print[Style[ Row[{" La formula finale \[EGrave] piuttosto semplice: si applica il teorema di Pitagora, dove un cateto si ottiene come differenza delle ascisse dei due punti e l'altro sottraendo le loro ordinate." }],"Text" ]];
+
+Xp1= ToString[ Subscript["(X",Subscript["P","1"]],  FormatType -> StandardForm];
+Xp2= ToString[ Subscript["X",Subscript["P","2"]],  FormatType -> StandardForm];
+Yp2= ToString[ Subscript["Y",Subscript["P","2"]],  FormatType -> StandardForm];
+Yp1= ToString[ Subscript["(Y",Subscript["P","1"]],  FormatType -> StandardForm];
+X= Xp1 <> "-" <> Xp2 <> ")";
+Y= Yp1 <> "-" <> Yp2 <> ")";
+QX=ToString[ X ^2,  FormatType -> StandardForm];
+QY=ToString[ Y ^2,  FormatType -> StandardForm];
+Radish7= QX <> " + " <> QY;
+
+
+Print[Style[Row[{ "d(", Subscript["P","1"], " ", Subscript["P","2"], ")" , " = ", Sqrt[Radish7]}],"Subtitle" ]];
+
+
+
+
+
 ];
