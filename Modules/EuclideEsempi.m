@@ -170,7 +170,7 @@ Print[Style[Row[{"AB : AC = AC : AH"}],"Text", Bold] ];
 
 Print[Style[ "Sostituendo i dati avremo: ","Text"]];
 
-Print[Style[Row[{"10 : AC = AC : 3,6"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"10 : AC = AC : 3,6"}],"Text", Bold] ];
 
 Print[Style[ "Utilizzando la propriet\[AGrave] fondamentale delle proporzioni otteniamo: ","Text"]];
 

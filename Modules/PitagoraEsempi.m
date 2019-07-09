@@ -96,12 +96,12 @@ Print[EsempioGraficoPit];
 
 Print[Style[ Row[{"Seguendo l'enunciato del teorena di pitagora (indicando con '", Subscript["c","1"], "' e '", Subscript["c","2"], "' i cateti e con 'i' l'ipotenusa)" }],"Text" ]];
 
-Print[Style[Row[{ "i"^2 , " = ", Subscript["c","1"]^2, "+",  Subscript["c","2"]^2 }],"Subsubtitle"]];
+Print[Style[Row[{ "i"^2 , " = ", Subscript["c","1"]^2, "+",  Subscript["c","2"]^2 }],"Text", Bold ]];
 
 Print[Style[ "possiamo ricavare le seguenti uguaglianze","Text"]];
 
-Print[Style[Row[{ Subscript["c","1"]^2 , " = ", "i"^2, "-",  Subscript["c","2"]^2   }],"Subsubtitle"]];
-Print[Style[Row[{ Subscript["c","2"]^2 , " = ", "i"^2, "-",  Subscript["c","1"]^2   }],"Subsubtitle"]];
+Print[Style[Row[{ Subscript["c","1"]^2 , " = ", "i"^2, "-",  Subscript["c","2"]^2   }],"Text", Bold ]];
+Print[Style[Row[{ Subscript["c","2"]^2 , " = ", "i"^2, "-",  Subscript["c","1"]^2   }],"Text", Bold ]];
 
 
 Print[Style[ "E da questi, a loro volta possiamo ricavare le seguenti formule per il calcolo delle misure dei lati, applicando la radice quadrata","Text"]];
@@ -115,9 +115,9 @@ Radish3= Terzo <> "-" <> Primo;
 
 
 
-Print[Style[Row[{ "i" , " = ", Sqrt[Radish1]  }],"Subsubtitle"]];
-Print[Style[Row[{ Subscript["c","1"] , " = ", Sqrt[Radish2]   }],"Subsubtitle"]];
-Print[Style[Row[{ Subscript["c","2"] , " = ", Sqrt[Radish3]  }],"Subsubtitle"]];
+Print[Style[Row[{ "i" , " = ", Sqrt[Radish1]  }],"Text", Bold ]];
+Print[Style[Row[{ Subscript["c","1"] , " = ", Sqrt[Radish2]   }],"Text", Bold ]];
+Print[Style[Row[{ Subscript["c","2"] , " = ", Sqrt[Radish3]  }],"Text", Bold ]];
 
 Print["\n"];
 
@@ -151,7 +151,7 @@ Print[Style[ Row[{"Dalle formule relative al teorema di Pitagora sappiamo che, d
 AltroCateto= ToString[ Subscript["Altro Cateto",""]^2,  FormatType -> StandardForm];
 Ipotenusa= ToString[ Subscript["Ipotenusa",""]^2,  FormatType -> StandardForm];
 Radish4= Ipotenusa <> " - " <> AltroCateto;
-Print[Style[Row[{ "Cateto" , " = ", Sqrt[Radish4]  }],"Text"]];
+Print[Style[Row[{ "Cateto" , " = ", Sqrt[Radish4]  }],"Text", Bold ]];
 
 Print[Style[ Row[{"Ottenuamo cos\[IGrave]" }],"Text" ]];
 
@@ -204,7 +204,7 @@ QY=ToString[ Y ^2,  FormatType -> StandardForm];
 Radish7= QX <> " + " <> QY;
 
 
-Print[Style[Row[{ "d(", Subscript["P","1"], " ", Subscript["P","2"], ")" , " = ", Sqrt[Radish7]}],"Subtitle" ]];
+Print[Style[Row[{ "d(", Subscript["P","1"], " ", Subscript["P","2"], ")" , " = ", Sqrt[Radish7]}],"Text", Bold ]];
 
 
 
