@@ -3,7 +3,7 @@
 ModulePitagoraEsempi[]:=PitagoraEsempi[{},
 (*Commento*)
 
-Print[Style["Dimostrazione Grafica:","Text",Bold]];
+Print[Style["Dimostrazione Grafica:","Subtitle",Bold]];
 
 (* Dimostrazione grafica del teorema di Pitagora
  Viene creata con dei poligoni colorati che subiscono delle rotazioni/translazioni
@@ -90,7 +90,7 @@ EsempioGraficoPit= Graphics[{
 	},ImageSize->{600,500},
 Axes->False];
 
-Print[Style["Formule del teorema di Pitagora:","Text",Bold]];
+Print[Style["Formule del teorema di Pitagora:","Subtitle",Bold]];
 
 Print[EsempioGraficoPit];
 
@@ -121,7 +121,7 @@ Print[Style[Row[{ Subscript["c","2"] , " = ", Sqrt[Radish3]  }],"Subsubtitle"]];
 
 Print["\n"];
 
-Print[Style["Esercizio svolto:","Text",Bold]];
+Print[Style["Esercizio svolto:","Subtitle",Bold]];
 
 EsempioGraficoPit2= Graphics[{
 

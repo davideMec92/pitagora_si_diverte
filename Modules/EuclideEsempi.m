@@ -9,7 +9,7 @@ EuclideEsempio2[];
 
 EuclideEsempio1[]:=Module[{},
 
-Print[Style["Dimostrazione Grafica:","Text",Bold]];
+Print[Style["Dimostrazione Grafica:","Subtitle",Bold]];
 
 (* Dimostrazione grafica del teorema di Euclide, sul cateto maggiore
  Viene creata con dei poligoni colorati che subiscono delle rotazioni/translazioni
@@ -72,12 +72,16 @@ GeometricTransformation[
 {DimostrazioneGrafica,0,1}]; 
 
 Print[ demonstrationManipulate ];
-
+Print["\n\n"];
 ];
 
-EuclideEsempio2[]:=Module[{},
 
-Print[Style[ "Teorema di Euclide - Spiegazione matematica","Subsubtitle", Bold]];
+
+
+
+
+EuclideEsempio2[]:=Module[{},
+Print[Style[ "Teorema di Euclide - Spiegazione matematica", "Subtitle",Bold]];
 
 esempio2Grafico = Graphics[{
 
@@ -113,7 +117,7 @@ Print[esempio2Grafico];
 
 Print[Style[ "Seguendo l'enunciato del primo teorema di Euclide avremo che","Text"]];
 
-Print[Style[Row[{"AC"^2, " = AH x AB"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"AC"^2, " = AH x AB"}],"Text", Bold] ];
 
 Print[Style[Row[{"AC"^2, " rappresenta l'area del quadrato costruito sul cateto AC, mentre AH x AB \[EGrave] l'area del rettangolo che ha per dimensioni la proiezione
 del cateto AC sull'ipotenusa e l'ipotenusa stessa "}],"Text"] ];
@@ -130,10 +134,15 @@ del cateto sull'ipotenusa" }] ,"Text"]];
 
 Print[Style[ "In formule questo si traduce nelle seguenti proporzioni: ","Text"]];
 
-Print[Style[Row[{"AB : CB = CB : HB"}],"Subsubtitle", Bold] ];
-Print[Style[Row[{"AB : AC = AC : AH"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"AB : CB = CB : HB"}],"Text", Bold] ];
+Print[Style[Row[{"AB : AC = AC : AH"}],"Text", Bold] ];
+Print["\n\n"];
 
-Print[Style["Esempio esercizio","Title", Bold] ];
+
+
+
+
+Print[Style["Esercizio svolto:","Subtitle",Bold] ];
 
 esempio3Grafico = Graphics[{
 	{EdgeForm[{Gray}],White,Triangle[{{5,0},{6,2},{10,0}}]},
@@ -157,7 +166,7 @@ Print[Style["Risoluzione","Subsubtitle", Bold] ];
 Print[Style[ "Conosciamo l'ipotenusa AB = 10 cm e la proiezione del cateto minore sull'ipotenusa AH = 3.6 cm. Grazie al primo teorema di Euclide 
 possiamo costruire la proporzione per calcolare la lunghezza del cateto minore AC : ","Text"]];
 
-Print[Style[Row[{"AB : AC = AC : AH"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"AB : AC = AC : AH"}],"Text", Bold] ];
 
 Print[Style[ "Sostituendo i dati avremo: ","Text"]];
 
@@ -165,26 +174,27 @@ Print[Style[Row[{"10 : AC = AC : 3,6"}],"Subsubtitle", Bold] ];
 
 Print[Style[ "Utilizzando la propriet\[AGrave] fondamentale delle proporzioni otteniamo: ","Text"]];
 
-Print[Style[Row[{"AC"^2, " = ", " 10 x 3,6"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"AC"^2, " = ", " 10 x 3,6"}],"Text", Bold] ];
 
-Print[Style[Row[{"AC = ", "\!\(\*SqrtBox[\(36\)]\)", " = 6 cm"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"AC = ", "\!\(\*SqrtBox[\(36\)]\)", " = 6 cm"}],"Text", Bold] ];
 
 Print[Style[ "Possiamo ricavare adesso BH come differenza (AB - AH) :","Text"]];
 
-Print[Style[Row[{"BH", " = ", " 10 - 3,6 = 6,4 cm"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"BH", " = ", " 10 - 3,6 = 6,4 cm"}],"Text", Bold] ];
 
 Print[Style[ "Utilizziamo infine il teorema di Euclide per determinare la lunghezza del cateto maggiore BC :","Text"]];
 
-Print[Style[Row[{"AB : BC = BC : BH"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"AB : BC = BC : BH"}],"Text", Bold] ];
 
-Print[Style[Row[{"10 : BC = BC : 6,4"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"10 : BC = BC : 6,4"}],"Text", Bold] ];
 
-Print[Style[Row[{"BC"^2, " = ", " 10 x 6,4"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"BC"^2, " = ", " 10 x 6,4"}],"Text", Bold] ];
 
-Print[Style[Row[{"BC = ", "\!\(\*SqrtBox[\(64\)]\)", " = 8 cm"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"BC = ", "\!\(\*SqrtBox[\(64\)]\)", " = 8 cm"}],"Text", Bold] ];
 
 Print[Style[ "Infine il perimetro P \[EGrave] dato dalla somma della lunghezza dei lati ottenuti: ","Text"]];
 
-Print[Style[Row[{"P = AB + BC + AC = 10 + 8 + 6 = 24 cm"}],"Subsubtitle", Bold] ];
+Print[Style[Row[{"P = AB + BC + AC = 10 + 8 + 6 = 24 cm"}],"Text", Bold] ];
+Print["\n\n"];
 
 ];
