@@ -137,7 +137,7 @@ Print[Style["Esempio esercizio","Title", Bold] ];
 
 esempio3Grafico = Graphics[{
 	{EdgeForm[{Gray}],White,Triangle[{{5,0},{6,2},{10,0}}]},
-	{EdgeForm[{Blue}],LightGray, Polygon[{{6,2},{6.2,1.9},{6.1,1.7},{5.9,1.8}}]},
+	{EdgeForm[{Blue}],White, Polygon[{{6,2},{6.2,1.9},{6.1,1.7},{5.9,1.8}}]},
 	{EdgeForm[{Dashed}],Dashed, Opacity[0.7],Line[{{6,2},{6,0}}]},
 			Black,
 			Text[Style[ "A" ,"Text",Bold],{4.8,-0.2}],
