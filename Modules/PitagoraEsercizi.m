@@ -260,7 +260,7 @@ PitagoraEsercizio4[] := Module[{},
 	
 	While[ ySecondPoint == yFirstPoint, ySecondPoint = GenerateRandomInt[]; ];
 	
-	cartesianPlot = ListPlot[ {{ xFirstPoint, yFirstPoint}, {xSecondPoint, ySecondPoint} }->{"A","B"}, LabelingFunction->Above, ImageSize->Large, PlotStyle->{ Dashed, PointSize[Large] }, PlotRange-> {{2.5,2.5}, {2.5,2.5}}, GridLines-> Automatic];
+	cartesianPlot = ListPlot[ {{ xFirstPoint, yFirstPoint}, {xSecondPoint, ySecondPoint} }->{"A","B"}, LabelingFunction->Above, ImageSize->Large, PlotStyle->{ Dashed, PointSize[Large] }, AspectRatio->1, PlotRange-> {{2.5,2.5}, {2.5,2.5}}, GridLines-> Automatic];
    
     Print[cartesianPlot];
     
