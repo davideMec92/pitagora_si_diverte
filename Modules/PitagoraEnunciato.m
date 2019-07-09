@@ -7,11 +7,16 @@ Print[Style[ "Teorema di Pitagora","Subsubtitle", Bold]];
 Print[Style[ "In un triangolo rettangolo il quadrato costruito sull'ipotenusa \[EGrave] equivalente alla somma dei quadrati costruiti sui cateti.","Text"]];
 
 Print[Style[Row[{"AB"^2, "+", "BC"^2, "=", "AC"^2}],"Subsubtitle"]];
-Print[Style[ "Oppure","Text"]];
-Print[Style[Row[{ Subscript[Q,c1], "+",  Subscript[Q,c2] , "=",  Subscript[Q,"i"] }],"Subsubtitle"]];
+
+imgDirectory = NotebookDirectory[] <> "Images/";
+	
+CCI = FileNameJoin[{ imgDirectory,"CCI.png"}];	
 
 
-Print[Graphics[{
+PiQ=Image[ Import[CCI], ImageSize->{380,380}];
+
+Print[Grid[{
+	{Graphics[{
 
 	{EdgeForm[{Gray}],LightBlue,Polygon[{{6,2},{10,0},{12,4},{8,6}}]},
 	{EdgeForm[{Gray}],LightPurple,Rectangle[{5,0},{10,-5}]},
@@ -30,9 +35,13 @@ Print[Graphics[{
 			
 
 	},ImageSize->{600,500},
-Axes->False]];
-	
+Axes->False], PiQ}
+	},Frame->Transparent, Alignment->Bottom, ItemSize -> {{Scaled[.3],Scaled[.3]}}, 
+ Frame -> All]
+];
+
 Print["\n\n"];
+
 
 
 ];

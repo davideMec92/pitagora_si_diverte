@@ -7,9 +7,17 @@ Print[Style[ "Teorema di Euclide","Subsubtitle", Bold]];
 Print[Style[ "In un triangolo rettangolo il quadrato costruito un cateto \[EGrave] equivalente al rettangolo che ha i lati congruenti all'ipotenusa e alla proiezione dello stesso cateto su di essa.","Text"]];
 
 
+imgDirectory = NotebookDirectory[] <> "Images/";
+	
+QR = FileNameJoin[{ imgDirectory,"QR.png"}];	
 
 
-Print[Graphics[{
+EuQ=Image[ Import[QR], ImageSize->{330,330}];
+
+
+
+Print[Grid[{
+		{Graphics[{
 
 	
 
@@ -38,13 +46,17 @@ Print[Graphics[{
 			Text[Style[ "D" ,"Text",Bold],{4,3.2}],
 			Text[Style[ "E" ,"Text",Bold],{2.8,1}],
 			
-			Text[Style[ Q\[DotEqual]R ,"Subtitle",Bold],{9,3}],
+			(*Text[Style[ Q\[DotEqual]R ,"Subtitle",Bold],{9,3}],*)
 			
 			
 
 	},ImageSize->{600,500},
-Axes->False]];
-	
+Axes->False], 
+		EuQ}
+	},Frame->Transparent, Alignment->Bottom, ItemSize -> {{Scaled[.3],Scaled[.3]}}, 
+ Frame -> All]
+];
+
 Print["\n\n"];
 
 
