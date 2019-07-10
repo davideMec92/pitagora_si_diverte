@@ -16,7 +16,7 @@ Logo = Image[Import[Logh], ImageSize->Medium];
 Pitagora=Image[ Import[Pit], ImageSize->{470,470}];
 Euclide= Image[ Import[Eu], ImageSize->{495,495}];
 
-X=0;
+
 
 Print[Grid[{
 			{"",
@@ -25,10 +25,13 @@ Print[Grid[{
  Frame -> All]
 ];
 
+
+X=1;
+
 Print[Grid[{
 		{"", 
-		Button[Euclide, If[x>0, x--],ContentPadding -> False, FrameMargins->None, Background->White, Appearance->"Frameless"], 
-		Button[Pitagora, If[x>0, x++], ContentPadding -> False, FrameMargins->None, Background->White, Appearance->"Frameless"]}
+		Button[Euclide, NotebookLocate["_EuclideEnunciato"],ContentPadding -> False, FrameMargins->None, Background->White, Appearance->"Frameless"], 
+		Button[Pitagora, If[x>0, NotebookLocate["_PitagoraEnunciato"]], ContentPadding -> False, FrameMargins->None, Background->White, Appearance->"Frameless"]}
 	},Frame->Transparent, Alignment->Center, ItemSize -> {{Scaled[.15],Scaled[.3], Scaled[.3]}}, 
  Frame -> All]
 ];
