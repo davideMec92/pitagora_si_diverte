@@ -122,14 +122,14 @@ Print[Style[Row[{"AC"^2, " = AH x AB"}],"Text", Bold] ];
 Print[Style[Row[{"AC"^2, " rappresenta l'area del quadrato costruito sul cateto AC, mentre AH x AB \[EGrave] l'area del rettangolo che ha per dimensioni la proiezione
 del cateto AC sull'ipotenusa e l'ipotenusa stessa "}],"Text"] ];
 
-loginButton = Button[
+medioProporzionaleButton = Button[
 					"medio proporzionale",
 					(
 						MessageDialog[ "Date due grandezze A e B, il medio proporzionale M \[EGrave] dato da: A:M = M: B"];
 					)
 				];
 
-Print[Style[ Row[{"Alla luce di questo possiamo affermare che: in un triangolo rettangolo, ciascun cateto \[EGrave] il ", loginButton, "tra l'ipotenusa e la proiezione
+Print[Style[ Row[{"Alla luce di questo possiamo affermare che: in un triangolo rettangolo, ciascun cateto \[EGrave] il ", medioProporzionaleButton, "tra l'ipotenusa e la proiezione
 del cateto sull'ipotenusa" }] ,"Text"]];
 
 Print[Style[ "In formule questo si traduce nelle seguenti proporzioni: ","Text"]];

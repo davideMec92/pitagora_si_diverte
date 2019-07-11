@@ -13,8 +13,8 @@ Pit = FileNameJoin[{ imgDirectory,"2.png"}];
 
 Logo = Image[Import[Logh], ImageSize->Medium];
 
-Pitagora=Image[ Import[Pit], ImageSize->{470,470}];
-Euclide= Image[ Import[Eu], ImageSize->{495,495}];
+Pitagora=Image[ Import[Pit], ImageSize->Medium];
+Euclide= Image[ Import[Eu], ImageSize->Medium];
 
 
 

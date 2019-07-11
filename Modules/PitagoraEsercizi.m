@@ -1,30 +1,48 @@
 (* ::Package:: *)
 
+
+Import["Modules/File_manager.m"];
+Import["Modules/EuclideEsercizi.m"];
+
 xFirstPoint = null;
 yFirstPoint = null;
 xSecondPoint = null;
 ySecondPoint = null;
 
 ModulePitagoraEsercizi[] := Module[{},
-
-(*test = True;
-
-If[test \[Equal] True, 
-(
-	PitagoraEsercizio1[];
-	PitagoraEsercizio2[];
-	PitagoraEsercizio3[];
-	PitagoraEsercizio4[];
- ), Print["Devi completare la sezione su Euclide prima!"]; ];*)
  
- PitagoraEsercizio1[];
- PitagoraEsercizio2[];
- PitagoraEsercizio3[];
- PitagoraEsercizio4[];
+ pitagoraEserciziStartButton = Button[
+					"Inzia esercizi Pitagora",
+					(
+						userSessionName = GetUserSession[];
+						
+						If[ userSessionName != "", ( 
+							
+							userData = AddUser[ userSessionName ];
+						
+							If[ userData[[GetIndexEx1Euclide[]]] == 0, (
+								MessageDialog[ "E' necessario completare il primo esercizio nella sezione relativa ad Euclide prima di procedere"];
+							), (
+								If[ userData[[GetIndexEx2Euclide[]]] == 0, (
+									MessageDialog[ "E' necessario completare il secondo esercizio nella sezione relativa ad Euclide prima di procedere"];
+								), (
+									PitagoraEsercizio1[];
+                                    PitagoraEsercizio2[];
+                                    PitagoraEsercizio3[];
+                                    PitagoraEsercizio4[];
+								)];
+							
+							) ];
+						)];
+					)
+				];
+				
+ 
+ Print[pitagoraEserciziStartButton];
 	
 ];
 
-PitagoraEsercizio1[] := Module[{},
+PitagoraEsercizio1[] := DynamicModule[{},
 	
 	pitagorasTriads = List[{3,4,5},{5,12,13},{7,24,25}];
 	n = RandomInteger[{1, 3}];
