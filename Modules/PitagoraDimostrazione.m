@@ -78,5 +78,11 @@ Print[Todo];
 	
 Print["\n\n"];
 
+Print[Grid[
+				{{Button["Slide Precedente",NotebookLocate["_PitagoraEnunciato"],Background -> RGBColor[29,131,118],FrameMargins->Medium],"","",Button["Prossima Slide",NotebookLocate["_PitagoraEsempi"],Background -> RGBColor[29,131,118],FrameMargins->Medium]}},
+		 		ItemSize -> {{Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber]}}, Frame -> Transparent
+		 	]];
+
+
 
 ];

@@ -197,4 +197,12 @@ Print[Style[ "Infine il perimetro P \[EGrave] dato dalla somma della lunghezza d
 Print[Style[Row[{"P = AB + BC + AC = 10 + 8 + 6 = 24 cm"}],"Text", Bold] ];
 Print["\n\n"];
 
+
+
+Print[Grid[
+				{{Button["Slide Precedente",NotebookLocate["_EuclideDimostrazione"],Background -> RGBColor[29,131,118],FrameMargins->Medium],"","",Button["Prossima Slide",NotebookLocate["_EuclideEsercizi"],Background -> RGBColor[29,131,118],FrameMargins->Medium]}},
+		 		ItemSize -> {{Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber]}}, Frame -> Transparent
+		 	]];
+
+
 ];

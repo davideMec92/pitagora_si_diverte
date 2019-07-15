@@ -254,4 +254,11 @@ Print[Style[Row[{"Una terna come (3, 4, 5) \[EGrave] detta primitiva mentre una 
 Print[Style[Row[{"Data la terna pitagorica primitiva (a, b, c) si definisce una terna pitagorica derivata la terna:"}],"Text"] ];
 Print[Style[Row[{"(ka,", " kb,", " kc)", " con k numero intero positivo"}],"Text", Bold] ];
 
+Print["\n\n"];
+
+Print[Grid[
+				{{Button["Slide Precedente",NotebookLocate["_PitagoraDimostrazione"],Background -> RGBColor[29,131,118],FrameMargins->Medium],"","",Button["Prossima Slide",NotebookLocate["_PitagoraEsercizi"],Background -> RGBColor[29,131,118],FrameMargins->Medium]}},
+		 		ItemSize -> {{Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber]}}, Frame -> Transparent
+		 	]];
+
 ];

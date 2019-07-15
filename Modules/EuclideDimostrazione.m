@@ -207,5 +207,10 @@ Print[Todo];
 	
 Print["\n\n"];
 
+Print[Grid[
+				{{Button["Slide Precedente",NotebookLocate["_EuclideEnunciato"],Background -> RGBColor[29,131,118],FrameMargins->Medium],"","",Button["Prossima Slide",NotebookLocate["_EuclideEsempi"],Background -> RGBColor[29,131,118],FrameMargins->Medium]}},
+		 		ItemSize -> {{Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber]}}, Frame -> Transparent
+		 	]];
+
 
 ];

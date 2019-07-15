@@ -6,6 +6,12 @@ Import["Modules/User.m"];
 ModuleEuclideEsercizi[]:=Module[{},
 	EuclideEsercizio1[];
 	EuclideEsercizio2[];
+	
+	Print[Grid[
+				{{Button["Slide Precedente",NotebookLocate["_EuclideEsempi"],Background -> RGBColor[29,131,118],FrameMargins->Medium],"","",Button["Torna alla Home",NotebookLocate["_intro"],Background -> RGBColor[29,131,118],FrameMargins->Medium]}},
+		 		ItemSize -> {{Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber]}}, Frame -> Transparent
+		 	]];
+
 ];
 
 EuclideEsercizio1[]:=Module[{},

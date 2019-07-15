@@ -1,6 +1,5 @@
 (* ::Package:: *)
 
-
 Import["Modules/File_manager.m"];
 Import["Modules/EuclideEsercizi.m"];
 
@@ -39,6 +38,14 @@ ModulePitagoraEsercizi[] := Module[{},
 				
  
  Print[pitagoraEserciziStartButton];
+ 
+ 
+ Print["\n\n"];
+ 
+ 	Print[Grid[
+				{{Button["Slide Precedente",NotebookLocate["_PitagoraEsempi"],Background -> RGBColor[29,131,118],FrameMargins->Medium],"","",Button["Torna alla Home",NotebookLocate["_intro"],Background -> RGBColor[29,131,118],FrameMargins->Medium]}},
+		 		ItemSize -> {{Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber]}}, Frame -> Transparent
+		 	]];
 	
 ];
 
