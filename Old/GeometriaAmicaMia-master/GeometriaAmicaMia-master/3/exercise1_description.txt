@@ -1,1 +1,0 @@
-Dato il triangolo seguente calcolare la misura del lato mancante.

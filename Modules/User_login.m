@@ -47,13 +47,15 @@ DisplayUserProgress[ userData_, loginButton_ ]:=Module[{},
 		pitagoraEx2 = FileNameJoin[{ mainDirectory,"error.png"}];
 		pitagoraEx3 = FileNameJoin[{ mainDirectory,"error.png"}];
 		pitagoraEx4 = FileNameJoin[{ mainDirectory,"error.png"}];
+		
+		progressCounter = 0;
 	
-		If[ GetEuclideExercise1[userData] == 1, euclideEx1 = FileNameJoin[{ mainDirectory,"checked.png"}] ];
-		If[ GetEuclideExercise2[userData] == 1, euclideEx2 = FileNameJoin[{ mainDirectory,"checked.png"}] ];
-		If[ GetPitagoraExercise1[userData] == 1, pitagoraEx1 = FileNameJoin[{ mainDirectory,"checked.png"}] ];
-		If[ GetPitagoraExercise2[userData] == 1, pitagoraEx2 = FileNameJoin[{ mainDirectory,"checked.png"}] ];
-		If[ GetPitagoraExercise3[userData] == 1, pitagoraEx3 = FileNameJoin[{ mainDirectory,"checked.png"}] ];
-		If[ GetPitagoraExercise4[userData] == 1, pitagoraEx4 = FileNameJoin[{ mainDirectory,"checked.png"}] ];	
+		If[ GetEuclideExercise1[userData] == 1, (euclideEx1 = FileNameJoin[{ mainDirectory,"checked.png"}]; progressCounter = progressCounter +1; )];
+		If[ GetEuclideExercise2[userData] == 1, (euclideEx2 = FileNameJoin[{ mainDirectory,"checked.png"}]; progressCounter = progressCounter +1; ) ];
+		If[ GetPitagoraExercise1[userData] == 1, (pitagoraEx1 = FileNameJoin[{ mainDirectory,"checked.png"}]; progressCounter = progressCounter +1; ) ];
+		If[ GetPitagoraExercise2[userData] == 1, (pitagoraEx2 = FileNameJoin[{ mainDirectory,"checked.png"}]; progressCounter = progressCounter +1; ) ];
+		If[ GetPitagoraExercise3[userData] == 1, (pitagoraEx3 = FileNameJoin[{ mainDirectory,"checked.png"}]; progressCounter = progressCounter +1; ) ];
+		If[ GetPitagoraExercise4[userData] == 1, (pitagoraEx4 = FileNameJoin[{ mainDirectory,"checked.png"}]; progressCounter = progressCounter +1; ) ];	
 	
 		userProgressgrid = Grid[{
 		{"Eculide Es.1", "Euclide es.2", "Pitagora es.1", "Pitagora es.2", "Pitagora es.3", "Pitagora es.4"},
@@ -63,6 +65,8 @@ DisplayUserProgress[ userData_, loginButton_ ]:=Module[{},
 		 Image[ Import[pitagoraEx2], ImageSize->Tiny],
 		 Image[ Import[pitagoraEx3], ImageSize->Tiny],
 		 Image[ Import[pitagoraEx4], ImageSize->Tiny] } }, Frame->None ];
+	
+		Print[Style[Row[{ProgressIndicator[ ( progressCounter * 1 )/6], " Esercizi completati " <> ToString[ progressCounter],  " di 6"}],"Text"] ];
 	
 		Print[userProgressgrid];
 		LoginDone = True;		

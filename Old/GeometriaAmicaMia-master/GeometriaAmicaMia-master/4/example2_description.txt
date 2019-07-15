@@ -1,1 +1,0 @@
-Dato un segmento è possibile ricavare il suo punto medio mediante costruzione
