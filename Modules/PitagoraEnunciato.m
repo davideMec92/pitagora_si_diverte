@@ -42,46 +42,8 @@ Axes->False], PiQ}
 
 Print["\n\n"];
 
-TernePitagoriche[];
+
 
 ];
 
-TernePitagoriche[]:=Module[{},
 
-
-Print[Style[ "Terne Pitagoriche","Subsubtitle", Bold]];
-Print[Style[ "Una terna pitagorica \[EGrave] una terna di numeri interi a, b, c tali che soddisfino la condizione: ","Text"]];
-
-Print[Style[Row[{"a"^2, " + ", "b"^2, "= ", "c"^2}],"Text", Bold] ];
-
-Print[Style[ "Ad esempio (3, 4, 5) \[EGrave] una terna pitagorica, mentre (1, 1, \!\(\*SqrtBox[\(2\)]\)) non \[EGrave] una terna pitagorica in quanto l'ultimo numero (c) non \[EGrave] intero","Text"]];
-
-framesAnimazioneTerne = Import[ imgDirectory <> "Pythagorean_triads.gif" ];
-animazioneTerne = ListAnimate[framesAnimazioneTerne, AnimationRate->1, Alignment->Center, ImageSize->Medium];
-
-animazioneGrid = Grid[{
-			{Row[{
-				animazioneTerne, 
-				Style["   Nell'animazione \[EGrave] possibile dimostrare graficamente che:  ", "Text"],
-				Style[Row[{"3"^2, " + ", "4"^2, "= ", "5"^2}],"Text", Bold]
-			}]} 
-		}, Frame->Transparent];
-		
-Print[animazioneGrid];
-
-Print[Style[ "Terne Pitagoriche Primitive e Derivate","Subsubtitle", Bold]];
-
-coprimiButton = Button[
-					"coprimi",
-					(
-						MessageDialog[ "In matematica, gli interi a e b si dicono coprimi se e solo se essi non hanno nessun divisore comune eccetto 1 e -1 o, in modo equivalente, se il loro massimo comune divisore \[EGrave] 1."];
-					)
-				];
-				
-Print[Style[Row[{"Una terna come (3, 4, 5) \[EGrave] detta primitiva mentre una terna come (6, 8, 10) \[EGrave] detta derivata. Ne consegue che una terna pitagorica si definisce
-'primitiva' quando i termini a e b sono ", coprimiButton}],"Text"] ];
-
-Print[Style[Row[{"Data la terna pitagorica primitiva (a, b, c) si definisce una terna pitagorica derivata la terna:"}],"Text"] ];
-Print[Style[Row[{"(ka,", " kb,", " kc)", " con k numero intero positivo"}],"Text", Bold] ];
-
-];
