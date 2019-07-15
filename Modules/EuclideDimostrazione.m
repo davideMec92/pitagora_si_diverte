@@ -32,7 +32,7 @@ Testo15= "Stessa altezza AH";
 Testo16= "Pertanto ACNM \[EGrave] equivalente ad AHFG";
 Testo17= "Applicando la propriet\[AGrave] transitiva, poiche ACNM\[DotEqual]ACDE e AFGH\[DotEqual]ACNM, otteniamo che ACDE\[DotEqual]AFGH ovvero Q\[DotEqual]R";
 
-passaggiList = {a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,i=0,j=0,k=0,l=0,m=0,n=0,\[NTilde]=0,o=0,p=0};
+passaggiList = {abstract=0,bolero=0,canada=0,detoide=0,exercise=0,faggot=0,grinch=0,h=0,igloo=0,jackdaniels=0,kilo=0,lime=0,mikewasosky=0,november=0,\[NTilde]andu=0,omega=0,papa=0};
 x=0;
 
 
