@@ -1,40 +1,40 @@
 (* ::Package:: *)
 
-LoginDone = False;
-
 GetUserLoginGraphicInterface[]:=DynamicModule[{},
 
-	If[ LoginDone == False, (
-		Print[Style[ "Registrazione", "Title"]];
-		Print[Style[ "Inserisci il tuo nome nel campo seguente per salvare i tuoi progressi", "Text"]];
-		usernameText = Null;
-		loginButton = Button[
-					"Login",
+	Print[Style[ "Registrazione", "Title"]];
+	Print[Style[ "Inserisci il tuo nome nel campo seguente per salvare i tuoi progressi", "Text"]];
+	usernameText = "";
+	loginButton = Button[
+				"Login",
+				(
+					If[ StringLength[ usernameText ] == 0, 
 					(
-						If [ LoginDone == False, (
-							usernameText = ToLowerCase[usernameText];
-							userListData = AddUser[ usernameText ];
-							ClearUserSession[];
-							StartUserSession[ usernameText ];
-							DisplayUserProgress[ userListData, loginButton ];
-						)
-						];
-						  
+						MessageDialog[ "Il campo login non pu\[OGrave] essere vuoto, inserire un nome e riprovare"];
+					),
+					(
+						usernameText = ToLowerCase[usernameText];
+						userListData = AddUser[ usernameText ];
+						ClearUserSession[];
+						StartUserSession[ usernameText ];
+						DisplayUserProgress[ userListData ];
 					)
-				];
 					
-		userLoginGrid = Grid[{
-			{Row[{
-				InputField[ Dynamic[usernameText], String ],
-				loginButton
-			}]} 
-		}, Frame->Transparent];
+					];  
+				)
+			];
+					
+	userLoginGrid = Grid[{
+		{Row[{
+			InputField[ Dynamic[usernameText], String ],
+			loginButton
+		}]} 
+	}, Frame->Transparent];
 	
-		Print[userLoginGrid];
-	)];
+	Print[userLoginGrid];
 ];
 
-DisplayUserProgress[ userData_, loginButton_ ]:=Module[{},
+DisplayUserProgress[ userData_ ]:=Module[{},
 	
 	mainDirectory = NotebookDirectory[] <> "Images/";
 	

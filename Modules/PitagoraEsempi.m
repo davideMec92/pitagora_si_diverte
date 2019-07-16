@@ -227,7 +227,7 @@ Print[Style[Row[{"a"^2, " + ", "b"^2, "= ", "c"^2}],"Text", Bold] ];
 Print[Style[ "Ad esempio (3, 4, 5) \[EGrave] una terna pitagorica, mentre (1, 1, \!\(\*SqrtBox[\(2\)]\)) non \[EGrave] una terna pitagorica in quanto l'ultimo numero (c) non \[EGrave] intero","Text"]];
 
 framesAnimazioneTerne = Import[ imgDirectory <> "Pythagorean_triads.gif" ];
-animazioneTerne = ListAnimate[framesAnimazioneTerne, AnimationRate->1, Alignment->Center, ImageSize->Medium];
+animazioneTerne = ListAnimate[framesAnimazioneTerne, AnimationRate->0.8, Alignment->Center, ImageSize->Medium];
 
 animazioneGrid = Grid[{
 			{Row[{
