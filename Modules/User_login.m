@@ -1,5 +1,12 @@
 (* ::Package:: *)
 
+(* Il presente modulo gestisce le funzioni, principalmente grafiche, del form di login utente. *)
+
+(* Questa funzione si occupa di definire graficamente il from di login utente mediante l'utilizzo di un oggetto Grid, 
+al suo interno troviamo un Button che richiama tutti i moduli necessari alla verifica e inizializzazione dei dati utente *)
+
+Import["Modules/User.m"];
+
 GetUserLoginGraphicInterface[]:=DynamicModule[{},
 
 	Print[Style[ "Registrazione", "Title"]];
@@ -34,10 +41,13 @@ GetUserLoginGraphicInterface[]:=DynamicModule[{},
 	Print[userLoginGrid];
 ];
 
+(* La presente funzione riceve in input i progressi utente e costruisce, mediante l'utilizzo di un oggetto Grid, 
+la relativa tabella riassuntiva. *)
 DisplayUserProgress[ userData_ ]:=Module[{},
 	
 	mainDirectory = NotebookDirectory[] <> "Images/";
 	
+	(* Inzializzazione esercizi *)
 	euclideEx1 = FileNameJoin[{ mainDirectory,"error.png"}];
 	euclideEx2 = FileNameJoin[{ mainDirectory,"error.png"}];
 	pitagoraEx1 = FileNameJoin[{ mainDirectory,"error.png"}];
@@ -47,6 +57,7 @@ DisplayUserProgress[ userData_ ]:=Module[{},
 		
 	progressCounter = 0;
 	
+	(* Verifica esercizi svolti con successo *)
 	If[ GetEuclideExercise1[userData] == 1, (euclideEx1 = FileNameJoin[{ mainDirectory,"checked.png"}]; progressCounter = progressCounter +1; )];
 	If[ GetEuclideExercise2[userData] == 1, (euclideEx2 = FileNameJoin[{ mainDirectory,"checked.png"}]; progressCounter = progressCounter +1; ) ];
 	If[ GetPitagoraExercise1[userData] == 1, (pitagoraEx1 = FileNameJoin[{ mainDirectory,"checked.png"}]; progressCounter = progressCounter +1; ) ];

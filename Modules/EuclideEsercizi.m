@@ -1,5 +1,8 @@
 (* ::Package:: *)
 
+(* Il modulo include una funzione generale "ModuleEuclideEsercizi" che richiama le diverse funzioni relative alla
+rappresentazione grafica e alla verifica degli esercizi *)
+
 Import["Modules/File_manager.m"];
 Import["Modules/User.m"];
 
@@ -14,6 +17,7 @@ ModuleEuclideEsercizi[]:=Module[{},
 
 ];
 
+(* Funzione che rappresenta graficamente la sezione del primo esercizio su Euclide e ne verfica la correttezza matematica *)
 EuclideEsercizio1[]:=Module[{},
 
 ecuclideEsercizio1Grafico = Graphics[{
@@ -33,39 +37,39 @@ Axes->False];
 Print[ecuclideEsercizio1Grafico];
 
 Print[Style[ "Calcolare la lunghezza del lato AC del triangolo rettangolo la cui ipotenusa misura 10 cm e la proiezione del cateto minore sull'ipotenusa misura 2.5 cm","Text"]];
-
+Print[Style[ "Nel caso di risultato con cifre decimali, arrotondare alla prima cifra", "Text"]];
+	
 resultEx1 = N[ Sqrt[(10*2.5)], 2];
 	
 	userValue1 = null;
-	Echo["Result: " <> ToString[resultEx1]];	
+	
 	verifyButton1 = Button[
 				"Verifica",
 				(	
+					(* Ottengo username utente attualente in sessione *)
 					userSessionName = GetUserSession[];
 						
+					(* Verifico se \[EGrave] presente un utente in sessione *)
 					If[ userSessionName != "", (
-											
+									
+						(* Ottengo dati utente *)		
 						userData = AddUser[ userSessionName ];
-							
+						
+						(* Verifico se l'utente ha gi\[AGrave] completato con successo l'esercizio attuale *)
 						If[ GetEuclideExercise1[userData] == 1, 
 						(
 							MessageDialog[ "Hai gi\[AGrave] completato con successo questo esercizio!"];
 						),
 						(
-							If [ EqualTo[ ToExpression[ userValue1 ] ][ ToExpression[ resultEx1 ] ], (											
-							(*Print[Style[ "Risposta esatta", "Text"]];						
-							Print[ Image[ Import[FileNameJoin[{ NotebookDirectory[],"Images/checked.png"}]], ImageSize->Tiny] ];*)
-							userSessionName = GetUserSession[];
-						
-							userData[[GetIndexEx1Euclide[]]] = 1;
-							SaveUserData[ userData];
-							MessageDialog[ "Complimenti, risposta esatta!"];
+							(* Verifico risultato esercizio *)
+							If [ EqualTo[ ToExpression[ userValue1 ] ][ ToExpression[ resultEx1 ] ], (	
+							
+								(* Aggiorno progressi utente *)
+								userData[[GetIndexEx1Euclide[]]] = 1;
+								SaveUserData[ userData];
+								MessageDialog[ "Complimenti, risposta esatta!"];
 							), (
-					
-							(*Print["Risposta errata"];
-							Print[ Image[ Import[FileNameJoin[{ NotebookDirectory[],"Images/error.png"}]], ImageSize->Tiny] ];*)
-						
-							MessageDialog[ "Risposta errata, riprova!"];
+								MessageDialog[ "Risposta errata, riprova!"];
 							)];
 							
 						) ];
@@ -106,53 +110,52 @@ Axes->False];
 Print[ecuclideEsercizio1Grafico];
 
 Print[Style[ "Calcolare il perimetro del triangolo rettangolo la cui ipotenusa misura 10 cm e la proiezione del cateto minore sull'ipotenusa misura 4.9 cm","Text"]];
-
+Print[Style[ "Nel caso di risultato con cifre decimali, arrotondare alla seconda cifra", "Text"]];
+	
 ac = N[ Sqrt[(10*4.9)], 2];
 bh = 10 - 4.9;
 bc = N[ Sqrt[(10*bh)], 2];
 
 resultEx2 = N[ (10 + 7 + 7.14), 2];
-	
-	userValue2 = null;
-	Echo["Result: " <> ToString[resultEx2]];	
-	verifyButton2 = Button[
-				"Verifica",
-				(
-					userSessionName = GetUserSession[];
-						
-					If[ userSessionName != "", (
-											
-						userData = AddUser[ userSessionName ];
+
+userValue2 = null;
+verifyButton2 = Button[
+			"Verifica",
+			(
+				(* Ottengo username utente attualente in sessione *)
+				userSessionName = GetUserSession[];
+				
+				(* Verifico se \[EGrave] presente un utente in sessione *)
+				If[ userSessionName != "", (
+									
+					(* Ottengo dati utente *)		
+					userData = AddUser[ userSessionName ];
+					
+					(* Verifico se l'utente ha gi\[AGrave] completato con successo l'esercizio attuale *)
+					If[ GetEuclideExercise2[userData] == 1, 
+					(
+						MessageDialog[ "Hai gi\[AGrave] completato con successo questo esercizio!"];
+					),
+					(
+						(* Verifico risultato esercizio *)
+						If [ EqualTo[ ToExpression[ userValue2 ] ][ ToExpression[ resultEx2 ] ], (
 							
-						If[ GetEuclideExercise2[userData] == 1, 
-						(
-							MessageDialog[ "Hai gi\[AGrave] completato con successo questo esercizio!"];
-						),
-						(
-							If [ EqualTo[ ToExpression[ userValue2 ] ][ ToExpression[ resultEx2 ] ], (											
-							(*Print[Style[ "Risposta esatta", "Text"]];						
-							Print[ Image[ Import[FileNameJoin[{ NotebookDirectory[],"Images/checked.png"}]], ImageSize->Tiny] ];*)
-							userSessionName = GetUserSession[];
-						
+							(* Aggiorno progressi utente *)
 							userData[[GetIndexEx2Euclide[]]] = 1;
 							SaveUserData[ userData];
 							MessageDialog[ "Complimenti, risposta esatta!"];
-							), (
-					
-							(*Print["Risposta errata"];
-							Print[ Image[ Import[FileNameJoin[{ NotebookDirectory[],"Images/error.png"}]], ImageSize->Tiny] ];*)
-						
+						), (
 							MessageDialog[ "Risposta errata, riprova!"];
-							)];
+						)];
 							
-						) ];
+					) ];
 						
-					),(
-						MessageDialog[ "Esegui prima il login, per svolgere gli esercizi"];
-					)];	
+				),(
+					MessageDialog[ "Esegui prima il login, per svolgere gli esercizi"];
+				)];	
 								  
-				)
-			];
+			)
+		];
 					
 	userExercise2Verify = Grid[{
 		{Row[{
@@ -165,11 +168,13 @@ resultEx2 = N[ (10 + 7 + 7.14), 2];
 
 ];
 
+(* Funzione che restituisce l'indice, della lista progressi utente, relativo all'esercizio 1 di Euclide *)
 GetIndexEx1Euclide[]:=Module[{index},
    index = 2;
    Return[index];
 ];
 
+(* Funzione che restituisce l'indice, della lista progressi utente, relativo all'esercizio 2 di Euclide *)
 GetIndexEx2Euclide[]:=Module[{index},
    index = 3;
    Return[index];
