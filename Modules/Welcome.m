@@ -6,6 +6,17 @@ ModuleWelcome[]:=Module[{},
 (*Mi servir\[AGrave] avere i dati utenti e di sessione*)
 Import["Modules/File_manager.m"];
 
+
+
+userSessionName = GetUserSession[];
+						
+						If[ userSessionName == "", ( 
+							
+							MessageDialog[ "Benvenuto in Pitagora si Diverte, per iniziare accedi al menu utente inserendo il tuo Nickname"<>"\n\n"<>"Poi, dalla home o dal menu in alto potrai accedere alla sessione di Eclide. "<>"\n\n"<>" Una volta completati i suoi esercizi potrai tornare procedere con la parte di Pitagora"];
+						)];
+
+
+
 (*Immagini*)
 imgDirectory = NotebookDirectory[] <> "Images/";
 	

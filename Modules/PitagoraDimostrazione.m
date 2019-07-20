@@ -13,10 +13,10 @@ Qc2= ToString[Subscript["Q","c2"], FormatType -> StandardForm];
 R1= ToString[Subscript["R","1"], FormatType -> StandardForm];
 R2= ToString[Subscript["R","2"], FormatType -> StandardForm];	
 		
-Testo1= "Tracciamo BH, altezza relativa all'ipotenusa, e la prolunghiamo in modo da dividere "<> Qi <>" nei due rettangoli "<> R1 <>" ed "<> R2 <>"";
-Testo2= "Dal primo teorema di Euclide abbiamo capito che "<> Qc1 <>" \[EGrave] equivalente a  "<> R1 <>"";
-Testo3= "Sempre da Euclide abbiamo che "<> Qc2 <>" \[EGrave] equivalente a "<> R2 <>"";
-Testo4= "Sapendo che "<> Qi <>" = "<> R1 <>" + "<> R2 <>" e dato che "<> R1 <>" = "<> Qc1 <>" e "<> R2 <>" = "<> Qc2 <>", otteniamo che "<> Qi <>" = "<> Qc1 <>" + "<> Qc1 <>"";
+TestoP1= "Tracciamo BH, altezza relativa all'ipotenusa, e la prolunghiamo in modo da dividere "<> Qi <>" nei due rettangoli "<> R1 <>" ed "<> R2 <>"";
+TestoP2= "Dal primo teorema di Euclide abbiamo capito che "<> Qc1 <>" \[EGrave] equivalente a  "<> R1 <>"";
+TestoP3= "Sempre da Euclide abbiamo che "<> Qc2 <>" \[EGrave] equivalente a "<> R2 <>"";
+TestoP4= "Sapendo che "<> Qi <>" = "<> R1 <>" + "<> R2 <>" e dato che "<> R1 <>" = "<> Qc1 <>" e "<> R2 <>" = "<> Qc2 <>", otteniamo che "<> Qi <>" = "<> Qc1 <>" + "<> Qc1 <>"";
 
 passaggiListPit = {a=0,b=0,c=0,d=0};
 x=0;
@@ -50,16 +50,16 @@ Todo= Manipulate[Grid[{
 			If[a == 1,Text[Style[ "H" ,"Text",Bold],{6.2,0.2}],,],
 	 },ImageSize->{Scaled[0.35],Scaled[0.5]}], 
 	 Grid[{
-			{If[passaggiListPit[[1]]==1,Text[Style[Testo1, TextAlignment->Left, LineIndent -> 0]],,]},
+			{If[passaggiListPit[[1]]==1,Text[Style[TestoP1, TextAlignment->Left, LineIndent -> 0]],,]},
 			{""},
 			{""},
-			{If[passaggiListPit[[2]]==1,Text[Style[Testo2, TextAlignment->Left, LineIndent -> 0]],,]}, 
+			{If[passaggiListPit[[2]]==1,Text[Style[TestoP2, TextAlignment->Left, LineIndent -> 0]],,]}, 
 			{""},
 			{""},
-			{If[passaggiListPit[[3]]==1,Text[Style[Testo3, TextAlignment->Left, LineIndent -> 0]],,]}, 
+			{If[passaggiListPit[[3]]==1,Text[Style[TestoP3, TextAlignment->Left, LineIndent -> 0]],,]}, 
 			{""},
 			{""},
-			{If[passaggiListPit[[4]]==1,Text[Style[Testo4, TextAlignment->Left]],,]} 
+			{If[passaggiListPit[[4]]==1,Text[Style[TestoP4, TextAlignment->Left]],,]} 
      },ItemSize->Scaled[0.5], Alignment -> {Left}],}
  }],     
 Row [
