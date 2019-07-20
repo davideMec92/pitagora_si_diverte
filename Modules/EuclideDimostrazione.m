@@ -35,10 +35,13 @@ passaggiList = {abstract=0,bolero=0,canada=0,detoide=0,exercise=0,faggot=0,grinc
 x=0;
 
 
-(*Todo contiene, tutto \[EGrave] una manipulate divisa in una griglia in due parti, a sinistra le immagini a destra i testi, essendo i passaggi 17, sono stati  *)
+(*Todo contiene tutto: \[EGrave] una manipulate divisa in una griglia in due parti, a sinistra le immagini a destra i testi, 
+	essendo i passaggi 17, sono stati divisi in pi\[UGrave] parti in modo da non riempire l'intero spazio con troppe informazioni, quindi alcuni testi o blocchi di immaginini sono programmati per "sparire" superato un certo passaggio N*)
 TodoEU= Manipulate[Grid[{
 	{Graphics[{
 
+		
+		(*Punto 0 le basi della dimostrazione*)
 		
 		{EdgeForm[{Gray}],White,Rectangle[{5,0},{6,-5}]},
 		{EdgeForm[{Gray}],White,Triangle[{{5,0},{6,2},{10,0}}]},
@@ -99,7 +102,7 @@ TodoEU= Manipulate[Grid[{
 			{EdgeForm[{Transparent}],Orange,Opacity[(passaggiList[[5]](1-passaggiList[[9]]))/1.5],Disk[{5, 0}, 0.3, {Pi/2,  2.7}]},
 			Black,
 			
-			(*Angoli retti complementari, necessario evidenziare?*)
+			(*Angoli retti complementari, necessario evidenziare? Non so, graficamente incasinano un po' ma permette di capire bene quali sono gli angoli di cui parlo, poi spariscono*)
 			
 			If[passaggiList[[5]]==1 && passaggiList[[6]]==0,{EdgeForm[{Blue,Dashed}],Opacity[0], Polygon[{{5,0},{5.3,0},{5.3,0.3},{5,0.3}}]},,],
 			If[passaggiList[[5]]==1 && passaggiList[[6]]==0,{EdgeForm[{Blue,Dashed}],Opacity[0], Polygon[{{5,0},{4.7,0.15},{4.85,0.46},{5.162,0.3}}]},,],
@@ -112,7 +115,7 @@ TodoEU= Manipulate[Grid[{
 			If[passaggiList[[7]] == 1 && passaggiList[[9]]==0, {EdgeForm[{Orange}],Orange, Opacity[0.7], Polygon[{{6,2},{6.2,1.9},{6.1,1.7},{5.9,1.8}}]},,],
 			If[passaggiList[[7]] == 1 && passaggiList[[9]]==0,{EdgeForm[{Orange}],Orange, Opacity[0.7], Polygon[{{3,1},{3.2,0.9},{3.32,1.11},{3.1,1.22}}]},,],
 			
-			(*8*)
+			(*8, fa niente serve solo a togliere i punti prima e mettere il testo*)
 			
 			(*9*)
 			Orange,
@@ -165,9 +168,9 @@ TodoEU= Manipulate[Grid[{
 			If[passaggiList[[17]] == 1,{Text[Style[ R ,"Text",Bold],{5.5,-2.7}]},,],
 			If[passaggiList[[17]] == 1 ,{Text[Style[ Q\[DotEqual]R ,"Text",Bold],{9,-3}]},,],
 			
-(*FINE*)			
+(*FINE immagine*)			
 	 },ImageSize->{Scaled[0.29],Scaled[1]}], 
-	 
+	 (*Sottogriglia per i testi, sono molti if annidati altrimenti si andava gi\[UGrave] di 17 righe e veniva bruttino*)
 	 Grid[{ {""},
 			{If[passaggiList[[4]]==0, Text[Style[Testo0, TextAlignment->Left, LineIndent -> 0]], If[passaggiList[[4]]==1 && passaggiList[[10]]==0,Text[Style[Testo4, TextAlignment->Left, LineIndent -> 0]],If[passaggiList[[10]]==1 && passaggiList[[13]]==0,Text[Style[Testo10, TextAlignment->Left, LineIndent -> 0]],If[passaggiList[[13]]==1 && passaggiList[[17]]==0,Text[Style[Testo13, TextAlignment->Left, LineIndent -> 0]],If[passaggiList[[17]]==1,Text[Style[Testo17, TextAlignment->Left, LineIndent -> 0]],,],],],] ,]},
 			{""},
@@ -189,7 +192,9 @@ TodoEU= Manipulate[Grid[{
 			{""}},ItemSize->Scaled[1], Alignment -> {Left}]
 	 
 	
- }}],      
+ }}],  
+ 
+ (*Bottoni di controllo, prima erano delle checkbox, funzionali per pochi passaggi, un danno per molti, quindi abbiamo opato per i pulsanti e la lista di passaggi*)        
 Row [
 {Button["Precedente", If[x>0,(passaggiList[[x]]=0; x--;)], ImageSize -> 200],
 Button["Prossimo", If[x<17,(x++; passaggiList[[x]]=1;)], ImageSize -> 200]},
@@ -205,7 +210,7 @@ Print[TodoEU];
 
 	
 Print["\n\n"];
-
+(*Bottoni Avanti-Indietro*)
 Print[Grid[
 				{{Button["Slide Precedente",NotebookLocate["_EuclideEnunciato"],Background -> RGBColor[29,131,118],FrameMargins->Medium],"","",Button["Prossima Slide",NotebookLocate["_EuclideEsempi"],Background -> RGBColor[29,131,118],FrameMargins->Medium]}},
 		 		ItemSize -> {{Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber]}}, Frame -> Transparent

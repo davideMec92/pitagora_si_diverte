@@ -139,7 +139,7 @@ Print[Style[Row[{"AB : AC = AC : AH"}],"Text", Bold] ];
 Print["\n\n"];
 
 
-
+(*Esercizio svolto, l'immagine come le precedenti poi un sacco di bla bla*)
 
 
 Print[Style["Esercizio svolto:","Subtitle",Bold] ];
