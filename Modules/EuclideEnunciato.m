@@ -99,7 +99,7 @@ Print[Grid[{
 	},ImageSize->{600,500},
 Axes->False], 
 		EuQ}
-	},Frame->Transparent, Alignment->Bottom, ItemSize -> {{Scaled[.3],Scaled[.3]}}, 
+	},Frame->Transparent, Alignment->Bottom, ItemSize -> {{Scaled[.4],Scaled[.4]}}, 
  Frame -> All]
 ];
 
@@ -109,7 +109,7 @@ Print[simbologia];
 Print["\n"];
 
 (*Bottoni Avanti-Indietro*)
-Print["\n\n"];
+
 Print[Grid[
 				{{"","","",Button["Prossima Slide",NotebookLocate["_EuclideDimostrazione"],Background -> RGBColor[29,131,118],FrameMargins->Medium]}},
 		 		ItemSize -> {{Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber], Scaled[1.0 / buttonsNumber]}}, Frame -> Transparent

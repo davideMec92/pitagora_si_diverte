@@ -80,7 +80,7 @@ Print[Grid[{
 
 	},ImageSize->{600,500},
 Axes->False], PiQ}
-	},Frame->Transparent, Alignment->Bottom, ItemSize -> {{Scaled[.3],Scaled[.3]}}, 
+	},Frame->Transparent, Alignment->Bottom, ItemSize -> {{Scaled[.4],Scaled[.4]}}, 
  Frame -> All]
 ];
 
