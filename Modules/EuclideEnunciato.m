@@ -1,12 +1,15 @@
 (* ::Package:: *)
 
 ModuleEuclideEnunciato[]:=EuclideEnunciato[{},
-(*Commento*)
+(*Qui viene presentato l'enunciato del teorema di euclide*)
+
+
+(*Testi*)
 
 Print[Style[ "Teorema di Euclide","Subsubtitle", Bold]];
 Print[Style[ "In un triangolo rettangolo il quadrato costruito un cateto \[EGrave] equivalente al rettangolo che ha i lati congruenti all'ipotenusa e alla proiezione dello stesso cateto su di essa.","Text"]];
 
-
+(*Immagine di euclide che parla*)
 imgDirectory = NotebookDirectory[] <> "Images/";
 	
 QR = FileNameJoin[{ imgDirectory,"QR.png"}];	
@@ -15,12 +18,12 @@ QR = FileNameJoin[{ imgDirectory,"QR.png"}];
 EuQ=Image[ Import[QR], ImageSize->{330,330}];
 
 
-
+*Una griglia, a sinistra il trianfgolo a destra limmagine di sopra*)
 Print[Grid[{
 		{Graphics[{
 
 	
-
+	(*In ordine: R, Triangolo, Q, Angolo retto, Linea tratteggiata per la proiezione del cateto*)
 	{EdgeForm[{Gray}],LightPurple,Rectangle[{5,0},{6,-5}]},
 	{EdgeForm[{Gray}],LightGray,Triangle[{{5,0},{6,2},{10,0}}]},
 
@@ -30,7 +33,7 @@ Print[Grid[{
 	{EdgeForm[{Dashed}],Dashed, Opacity[0.7],Line[{{6,2},{6,0}}]},
 	
 	
-	
+		(*Lettere*)
 			Black,
 			Text[Style[ Q ,"Subtitle",Bold],{4.5,1.5}],
 			Text[Style[ R ,"Subtitle",Bold],{5.5,-2.7}],
@@ -57,6 +60,8 @@ Axes->False],
  Frame -> All]
 ];
 
+
+(*Bottoni Avanti-Indietro*)
 Print["\n\n"];
 Print[Grid[
 				{{"","","",Button["Prossima Slide",NotebookLocate["_EuclideDimostrazione"],Background -> RGBColor[29,131,118],FrameMargins->Medium]}},

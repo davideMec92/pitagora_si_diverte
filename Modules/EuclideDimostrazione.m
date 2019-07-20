@@ -1,18 +1,15 @@
 (* ::Package:: *)
 
 ModuleEuclideDimostrazione[]:=EuclideDimostrazione[{},
-(*Commento*)
+(*Dimostrazione teroema euclide, l'idea \[EGrave] ispirata al docente che spiega punto per punto alla lavagna la dimostrazione*)
 
 Print[Style[ "Dimostrazione del teorema di Euclide","Subsubtitle", Bold]];
 
 (*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*)	
-	
-Qi= ToString[Subscript["Q","i"], FormatType -> StandardForm];
-Qc1= ToString[Subscript["Q","c1"], FormatType -> StandardForm];
-Qc2= ToString[Subscript["Q","c2"], FormatType -> StandardForm];
-R1= ToString[Subscript["R","1"], FormatType -> StandardForm];
-R2= ToString[Subscript["R","2"], FormatType -> StandardForm];	
 
+	
+			
+(*Testi dei vari passaggi in ordine*)
 Testo0= "Disegnamo il quadrato ACDE ed il rettangolo AFGH in modo che AF\[TildeFullEqual]AB";				
 Testo1= "Prolunghiamo il lato ED";
 Testo2= "Prolunghiamo FA e GH fino ad incontrare il prolungamento di ED nei punti M ed N";
@@ -32,12 +29,14 @@ Testo15= "Stessa altezza AH";
 Testo16= "Pertanto ACNM \[EGrave] equivalente ad AHFG";
 Testo17= "Applicando la propriet\[AGrave] transitiva, poiche ACNM\[DotEqual]ACDE e AFGH\[DotEqual]ACNM, otteniamo che ACDE\[DotEqual]AFGH ovvero Q\[DotEqual]R";
 
+
+(*Lista per tenere conto dei passaggi*)
 passaggiList = {abstract=0,bolero=0,canada=0,detoide=0,exercise=0,faggot=0,grinch=0,h=0,igloo=0,jackdaniels=0,kilo=0,lime=0,mikewasosky=0,november=0,\[NTilde]andu=0,omega=0,papa=0};
 x=0;
 
 
-
-Todo= Manipulate[Grid[{
+(*Todo contiene, tutto \[EGrave] una manipulate divisa in una griglia in due parti, a sinistra le immagini a destra i testi, essendo i passaggi 17, sono stati  *)
+TodoEU= Manipulate[Grid[{
 	{Graphics[{
 
 		
@@ -200,7 +199,7 @@ Button["Prossimo", If[x<17,(x++; passaggiList[[x]]=1;)], ImageSize -> 200]},
 ;
 
 
-Print[Todo];
+Print[TodoEU];
 
 
 
