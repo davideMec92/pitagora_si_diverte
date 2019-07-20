@@ -7,7 +7,21 @@ ModuleEuclideEnunciato[]:=EuclideEnunciato[{},
 (*Testi*)
 
 Print[Style[ "Teorema di Euclide","Subsubtitle", Bold]];
-Print[Style[ "In un triangolo rettangolo il quadrato costruito un cateto \[EGrave] equivalente al rettangolo che ha i lati congruenti all'ipotenusa e alla proiezione dello stesso cateto su di essa.","Text"]];
+
+(* Sezione per riproduzione audio testo *)
+PlayButton = Button[
+	Image[ Import[ NotebookDirectory[] <> "Images/speaker.png" ], ImageSize->{35,35} ],
+	Speak["In un triangolo rettangolo il quadrato costruito su un cateto \[EGrave] equivalente al rettangolo che ha i lati congruenti all'ipotenusa e alla proiezione dello stesso cateto su di essa."],
+	FrameMargins->None,
+	Background->None,
+	Appearance->"Frameless"
+];
+
+EnunciatoGrid = Grid[{
+{ Style[ "In un triangolo rettangolo il quadrato costruito su un cateto \[EGrave] equivalente al rettangolo che ha i lati congruenti all'ipotenusa e alla proiezione dello stesso cateto su di essa.", "Text"], PlayButton }
+}];
+
+Print[ EnunciatoGrid ];
 
 (*Immagine di euclide che parla*)
 imgDirectory = NotebookDirectory[] <> "Images/";
@@ -18,7 +32,7 @@ QR = FileNameJoin[{ imgDirectory,"QR.png"}];
 EuQ=Image[ Import[QR], ImageSize->{330,330}];
 
 
-*Una griglia, a sinistra il trianfgolo a destra limmagine di sopra*)
+(*Una griglia, a sinistra il trianfgolo a destra limmagine di sopra*)
 Print[Grid[{
 		{Graphics[{
 
@@ -47,11 +61,7 @@ Print[Grid[{
 			Text[Style[ "G" ,"Text",Bold],{6.2,-5.2}],
 			
 			Text[Style[ "D" ,"Text",Bold],{4,3.2}],
-			Text[Style[ "E" ,"Text",Bold],{2.8,1}],
-			
-			(*Text[Style[ Q\[DotEqual]R ,"Subtitle",Bold],{9,3}],*)
-			
-			
+			Text[Style[ "E" ,"Text",Bold],{2.8,1}]
 
 	},ImageSize->{600,500},
 Axes->False], 
