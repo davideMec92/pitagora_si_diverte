@@ -4,9 +4,17 @@ ModuleEuclideEnunciato[]:=EuclideEnunciato[{},
 (*Qui viene presentato l'enunciato del teorema di euclide*)
 
 
-(*Testi*)
+(*Testi e bottoni*)
 
 Print[Style[ "Teorema di Euclide","Subsubtitle", Bold]];
+
+simbologia = Button[
+					"Non comprendi i simboli?",
+					(
+						MessageDialog[ "\[DotEqual] Indica l'equivalenza. Date due figure A e B, diciamo che A \[DotEqual] B se hanno la stessa area. \n\n \[TildeFullEqual] Indica la congruenza. Diciamo, dati due segmenti AB e CD, diciamo che AB \[TildeFullEqual] CD se hanno la stessa lunghezza."];
+					)
+				];
+
 
 (* Sezione per riproduzione audio testo *)
 PlayButton = Button[
@@ -22,6 +30,7 @@ EnunciatoGrid = Grid[{
 }];
 
 Print[ EnunciatoGrid ];
+
 
 (*Immagine di euclide che parla*)
 imgDirectory = NotebookDirectory[] <> "Images/";
@@ -70,6 +79,10 @@ Axes->False],
  Frame -> All]
 ];
 
+
+Print["\n"];
+Print[simbologia];
+Print["\n"];
 
 (*Bottoni Avanti-Indietro*)
 Print["\n\n"];
