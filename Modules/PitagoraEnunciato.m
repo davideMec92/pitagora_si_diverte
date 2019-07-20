@@ -6,7 +6,21 @@ ModulePitagoraEnunciato[]:=PitagoraEnunciato[{},
 
 (*Testi*)
 Print[Style[ "Teorema di Pitagora","Subsubtitle", Bold]];
-Print[Style[ "In un triangolo rettangolo il quadrato costruito sull'ipotenusa \[EGrave] equivalente alla somma dei quadrati costruiti sui cateti.","Text"]];
+
+(* Sezione riproduzione audio teorema *)
+PlayButton = Button[
+	Image[ Import[ NotebookDirectory[] <> "Images/speaker.png" ], ImageSize->{35,35} ],
+	Speak["In un triangolo rettangolo il quadrato costruito sull'ipotenusa \[EGrave] equivalente alla somma dei quadrati costruiti sui cateti"],
+	FrameMargins->None,
+	Background->None,
+	Appearance->"Frameless"
+];
+
+EnunciatoGrid = Grid[{
+{ Style[ "In un triangolo rettangolo il quadrato costruito sull'ipotenusa \[EGrave] equivalente alla somma dei quadrati costruiti sui cateti.","Text"], PlayButton }
+}];
+
+Print[ EnunciatoGrid ];
 
 Print[Style[Row[{"AB"^2, "+", "BC"^2, "=", "AC"^2}],"Subsubtitle"]];
 

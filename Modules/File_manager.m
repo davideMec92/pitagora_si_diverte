@@ -81,7 +81,7 @@ StartUserSession[ username_ ]:=Module[{},
 
 (* Funzione che ritorna lo username utente, attualmente attivo sul notebook *)
 GetUserSession[]:=Module[{ username },
-	username = Null;
+	username = "";
 	
 	If[ FileExistsQ[ NotebookDirectory[] <> "Data/session.txt" ] == True, (
 		username = Import[ NotebookDirectory[] <> "Data/session.txt" ];
