@@ -233,8 +233,7 @@ Print[TodoEU];
 
 
 
-	
-Print["\n\n"];
+
 (*Bottoni Avanti-Indietro*)
 Print[Grid[
 				{{Button["Slide Precedente",NotebookLocate["_EuclideEnunciato"],Background -> RGBColor[29,131,118],FrameMargins->Medium],"","",Button["Prossima Slide",NotebookLocate["_EuclideEsempi"],Background -> RGBColor[29,131,118],FrameMargins->Medium]}},

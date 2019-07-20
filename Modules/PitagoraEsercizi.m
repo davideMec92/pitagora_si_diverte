@@ -37,9 +37,14 @@ ySecondPoint = null;
 
 (* Modulo generale che gestisce i quattro diversi moduli relativi a diversi esercizi *)
 ModulePitagoraEsercizi[] := Module[{},
+
+
+(* Sezione riproduzione audio teorema *)
+
+
  
  pitagoraEserciziStartButton = Button[
-					"Inzia esercizi Pitagora",
+					Image[ Import[ NotebookDirectory[] <> "Images/hophop.png" ], ImageSize->Medium ],
 					(
 						userSessionName = GetUserSession[];
 						
@@ -63,11 +68,20 @@ ModulePitagoraEsercizi[] := Module[{},
 						), (
 							MessageDialog[ "E' necessario effettuare il login, dal menu utente, prima di procedere"];
 						)];
-					)
-				];
+					),
+				FrameMargins->None,
+				Background->None,
+				Appearance->"Frameless"
+];
 				
- 
- Print[pitagoraEserciziStartButton];
+				
+ EserciziBGrid = Grid[{
+{"", pitagoraEserciziStartButton },
+{"",Style[ "       Clicca per iniziare gli esercizi!","Text"]}
+}, ItemSize->{{Scaled[0.28], Scaled[0.3]}}];
+
+
+ Print[EserciziBGrid];
  
  
  Print["\n\n"];
