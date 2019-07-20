@@ -74,8 +74,8 @@ resultEx1 = N[ Sqrt[(10*2.5)], 2];
 							
 						) ];
 						
-					),(
-						MessageDialog[ "Esegui prima il login, per svolgere gli esercizi"];
+					), (
+						MessageDialog[ "E' necessario effettuare il login, dal menu utente, prima di procedere"];
 					)];						  
 				)
 			];
@@ -150,8 +150,8 @@ verifyButton2 = Button[
 							
 					) ];
 						
-				),(
-					MessageDialog[ "Esegui prima il login, per svolgere gli esercizi"];
+				), (
+						MessageDialog[ "E' necessario effettuare il login, dal menu utente, prima di procedere"];
 				)];	
 								  
 			)

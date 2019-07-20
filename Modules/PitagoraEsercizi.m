@@ -35,6 +35,8 @@ ModulePitagoraEsercizi[] := Module[{},
 								)];
 							
 							) ];
+						), (
+							MessageDialog[ "E' necessario effettuare il login, dal menu utente, prima di procedere"];
 						)];
 					)
 				];
@@ -98,8 +100,8 @@ PitagoraEsercizio1[] := DynamicModule[{},
 							
 						) ];
 						
-					),(
-						MessageDialog[ "Esegui prima il login, per svolgere gli esercizi"];
+					), (
+						MessageDialog[ "E' necessario effettuare il login, dal menu utente, prima di procedere"];
 					)];
 											  
 				)
@@ -166,8 +168,8 @@ PitagoraEsercizio2[] := Module[{},
 							
 						) ];
 						
-					),(
-						MessageDialog[ "Esegui prima il login, per svolgere gli esercizi"];
+					), (
+						MessageDialog[ "E' necessario effettuare il login, dal menu utente, prima di procedere"];
 					)];						  
 				)
 			];
@@ -251,8 +253,8 @@ PitagoraEsercizio3[] := Module[{},
 							
 						) ];
 						
-					),(
-						MessageDialog[ "Esegui prima il login, per svolgere gli esercizi"];
+					), (
+						MessageDialog[ "E' necessario effettuare il login, dal menu utente, prima di procedere"];
 					)];		
 							  
 				)
@@ -351,8 +353,8 @@ PitagoraEsercizio4[] := Module[{},
 							
 						) ];
 						
-					),(
-						MessageDialog[ "Esegui prima il login, per svolgere gli esercizi"];
+					), (
+						MessageDialog[ "E' necessario effettuare il login, dal menu utente, prima di procedere"];
 					)];
 									  
 				)

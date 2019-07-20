@@ -35,6 +35,8 @@ ModuleOptions[]:=Module[{},
 								)];
 							
 							) ];
+						), (
+							MessageDialog[ "E' necessario effettuare il login, dal menu utente, prima di procedere"];
 						)];
 					),
 				 "Pitagora Dimostrazione" :> (
@@ -54,6 +56,8 @@ ModuleOptions[]:=Module[{},
 								)];
 							
 							) ];
+						), (
+							MessageDialog[ "E' necessario effettuare il login, dal menu utente, prima di procedere"];
 						)];
 					),
 				 "Pitagora Esempi" :> (
@@ -73,6 +77,8 @@ ModuleOptions[]:=Module[{},
 								)];
 							
 							) ];
+						), (
+							MessageDialog[ "E' necessario effettuare il login, dal menu utente, prima di procedere"];
 						)];
 					),
 				 "Pitagora Esercizi" :> (
@@ -92,6 +98,8 @@ ModuleOptions[]:=Module[{},
 								)];
 							
 							) ];
+						), (
+							MessageDialog[ "E' necessario effettuare il login, dal menu utente, prima di procedere"];
 						)];
 					)}
 			], (* Bottoni a destra *)
@@ -135,6 +143,8 @@ Button[
 								)];
 							
 							) ];
+						), (
+							MessageDialog[ "E' necessario effettuare il login, dal menu utente, prima di procedere"];
 						)];
 					)
 				,ContentPadding -> False, FrameMargins->None, Background->White, Appearance->"Frameless"];
