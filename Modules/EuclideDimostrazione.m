@@ -1,5 +1,30 @@
 (* ::Package:: *)
 
+(*  
+
+  /$$$$$$$ /$$  /$$                                                                /$$             /$$/$$                             /$$             
+| $$__  $|__/ | $$                                                               |__/            | $|__/                            | $$             
+| $$  \ $$/$$/$$$$$$   /$$$$$$  /$$$$$$  /$$$$$$  /$$$$$$    /$$$$$$      /$$$$$$$/$$        /$$$$$$$/$$/$$    /$$/$$$$$$  /$$$$$$ /$$$$$$   /$$$$$$ 
+| $$$$$$$| $|_  $$_/  |____  $$/$$__  $$/$$__  $$/$$__  |____  $$     /$$_____| $      /$$__  $| $|  $$  /$$/$$__  $$/$$__  $|_  $$_/  /$$__  $$
+| $$____/| $$ | $$     /$$$$$$| $$  \ $| $$  \ $| $$  \__//$$$$$$$     |  $$$$$$| $$     | $$  | $| $$\  $$/$$| $$$$$$$| $$  \__/ | $$   | $$$$$$$$
+| $$     | $$ | $$ /$$/$$__  $| $$  | $| $$  | $| $$     /$$__  $$      \____  $| $$     | $$  | $| $$ \  $$$/| $$_____| $$      | $$ /$| $$_____/
+| $$     | $$ |  $$$$|  $$$$$$|  $$$$$$|  $$$$$$| $$    |  $$$$$$$       /$$$$$$$| $$     |  $$$$$$| $$  \  $/ |  $$$$$$| $$       |  $$$$|  $$$$$$$
+|__/     |__/  \___/  \_______/\____  $$\______/|__/     \_______/      |_______/|__/       \_______|__/   \_/   \_______|__/        \___/  \_______/
+                               /$$  \ $$                                                                                                             
+                              |  $$$$$$/                                                                                                             
+                               \______/                                                                                                              
+
+Progetto d'esame di Matematica computazionale
+Anno accademico 2018-2019
+
+Sviluppato su Wolfram Mathematica 11.3
+							   
+							   
+Davide Nunzio Maccarrone (0000843825)
+Bruno Quintero Panaro 	 (0000850912)  
+*)
+
+
 ModuleEuclideDimostrazione[]:=EuclideDimostrazione[{},
 (*Dimostrazione teroema euclide, l'idea \[EGrave] ispirata al docente che spiega punto per punto alla lavagna la dimostrazione*)
 
@@ -32,7 +57,7 @@ Testo17= "Applicando la propriet\[AGrave] transitiva, poiche ACNM\[DotEqual]ACDE
 
 (*Lista per tenere conto dei passaggi*)
 passaggiList = {abstract=0,bolero=0,canada=0,detoide=0,exercise=0,faggot=0,grinch=0,h=0,igloo=0,jackdaniels=0,kilo=0,lime=0,mikewasosky=0,november=0,\[NTilde]andu=0,omega=0,papa=0};
-x=0;
+xE=0;
 
 
 (*Todo contiene tutto: \[EGrave] una manipulate divisa in una griglia in due parti, a sinistra le immagini a destra i testi, 
@@ -196,8 +221,8 @@ TodoEU= Manipulate[Grid[{
  
  (*Bottoni di controllo, prima erano delle checkbox, funzionali per pochi passaggi, un danno per molti, quindi abbiamo opato per i pulsanti e la lista di passaggi*)        
 Row [
-{Button["Precedente", If[x>0,(passaggiList[[x]]=0; x--;)], ImageSize -> 200],
-Button["Prossimo", If[x<17,(x++; passaggiList[[x]]=1;)], ImageSize -> 200]},
+{Button["Precedente", If[xE>0,(passaggiList[[xE]]=0; xE--;)], ImageSize -> 200],
+Button["Prossimo", If[xE<17,(xE++; passaggiList[[xE]]=1;)], ImageSize -> 200]},
  Alignment -> Center],
  ControlPlacement -> Top, 
  FrameMargins -> 0, ContentSize -> Scaled[1]]
